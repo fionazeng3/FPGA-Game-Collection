@@ -1,0 +1,68 @@
+// This is the module that will convert the parallel data from NIOS to serial
+//	form and sent it outside.
+//
+// Input:
+//		clk_i: the clock that this module runs on
+//		clk_16_i: the clock that the bit_sample_counter runs on
+//		rst_i: the reset signal for  this module
+//		en_i: the enable signal for whole module
+//		trans_en_i: the transmit enable signal from NIOS processor
+//		para_data_i: the 8-bit data that will be sent out in parallel form
+//		load_i: the load signal from the NIOS processor
+//
+// Output:
+//		char_sent_o: the signal that indicates the parallel form data is sent
+//		serial_data_o: the para_data_i in serial form
+
+module transmit
+	(input	logic		clk_i
+	,input	logic		clk_16_i
+	,input	logic		rst_i
+	,input	logic		trans_en_i
+	,input	logic [7:0]	para_data_i
+	,input	logic		load_i
+	,output	logic		char_sent_o
+	,output	logic		serial_data_o
+	);
+	
+	logic [3:0] bsc_count;
+	logic serial_data;
+	logic sr_clock;
+	logic busy;
+	
+	bit_identification_counter bic
+		(.clk_i(clk_i)
+		,.rst_i(rst_i)
+		,.en_i(trans_en_i)
+		,.init_i(load_i)
+		,.trans_recv_done_o(char_sent_o)
+		);
+	
+	bit_sample_counter send_bsc
+		(.clk_i(clk_16_i)
+		,.rst_i(rst_i)
+		,.en_i(trans_en_i)
+		,.count_o(bsc_count)
+		);
+		
+	sr_clock_control srcc_p_to_s
+		(.bsc_count_i(bsc_count)
+		,.sr_clock_o(sr_clock)
+		);
+		
+	piso piso_buffer
+		(.sr_clk_i(sr_clock)
+		,.rst_i(rst_i)
+		,.data_i(para_data_i)
+		,.data_o(serial_data)
+		,.load_i(load_i)
+		,.busy_o(busy)
+		);
+		
+	io_buffer buffer
+		(.clk_i(clk_i)
+		,.rst_i(rst_i)
+		,.data_i(serial_data)
+		,.data_o(serial_data_o)
+		);
+endmodule

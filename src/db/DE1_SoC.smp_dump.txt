@@ -1,0 +1,21 @@
+
+State Machine - |DE1_SoC|serial_parallel_serial_interface:busDesign|receive:s_to_p|bit_identification_counter:bic|state_r
+Name state_r.eWait state_r.eDone state_r.eBusy 
+state_r.eWait 0 0 0 
+state_r.eBusy 1 0 1 
+state_r.eDone 1 1 0 
+
+State Machine - |DE1_SoC|serial_parallel_serial_interface:busDesign|transmit:p_to_s|bit_identification_counter:bic|state_r
+Name state_r.eWait state_r.eDone state_r.eBusy 
+state_r.eWait 0 0 0 
+state_r.eBusy 1 0 1 
+state_r.eDone 1 1 0 
+
+State Machine - |DE1_SoC|nios2:niosDesign|nios2_cpu:cpu|nios2_cpu_cpu:cpu|nios2_cpu_cpu_nios2_oci:the_nios2_cpu_cpu_nios2_oci|nios2_cpu_cpu_debug_slave_wrapper:the_nios2_cpu_cpu_debug_slave_wrapper|nios2_cpu_cpu_debug_slave_tck:the_nios2_cpu_cpu_debug_slave_tck|DRsize
+Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
+DRsize.000 0 0 0 0 0 0 
+DRsize.001 0 0 0 0 1 1 
+DRsize.010 0 0 0 1 0 1 
+DRsize.011 0 0 1 0 0 1 
+DRsize.100 0 1 0 0 0 1 
+DRsize.101 1 0 0 0 0 1 

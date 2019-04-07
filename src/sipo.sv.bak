@@ -1,0 +1,104 @@
+// This is the module for serial in parallel out
+// Input:
+// 		sr_clk_i: 	the clock for this module, it is not the original clock, it is
+//					the modified version by BSC, which have a 0.5T latency.
+//		rst_i:		the reset signal.
+//		data_i:		the input signal, in this module the input data is a serial signal.
+//					this signal should be an 8 data bits signal.
+//		enable_i:	the signal that instruct the module to read data. the default is an
+//					one cycle pulse.
+//		*:	This module assumes the data have been processed by start_detect, so the start
+//			bit would be trasferred to be the enable_i signal, which would be sent to this
+//			module simultaneously with the 8 data bits.	
+//	Output:
+//		data_o:		the output data signal, this signal is parallel, with 8 bits, each one
+//					store a single data bit.
+//					a start bit that is set to 0, the 8 bits data, otherwise it stays at 1.
+//		busy_o:		the signal that indicates that this module is currently processing
+//					data, so that the input shouldn't change.
+module sipo (sr_clk_i, rst_i, enable_i, data_i, data_o, busy_o); 
+	input logic sr_clk_i, rst_i, data_i, enable_i;
+	output logic [7:0] data_o;
+	output logic busy_o;
+	
+	logic[3:0] counter;
+	logic[7:0] data_buffer;
+	logic ps, ns;
+	parameter IDLE = 1'b0;
+	parameter LOADING = 1'b1;
+	
+	always_comb begin
+		case (ps)
+			IDLE:
+			begin
+				if (enable_i)
+					ns = LOADING;
+				else
+					ns = IDLE;
+			end
+			LOADING:
+			begin
+				if (counter == 8)
+					ns = IDLE;
+				else
+					ns = LOADING;
+			end
+			default: ns = IDLE;
+		endcase
+	end
+	
+	assign busy_o = ns;
+	
+	always_ff @(posedge sr_clk_i) 
+	begin
+		if (rst_i) begin
+			counter = 4'b0000;
+			data_buffer = 8'b00000000;
+		end 
+		ps = ns;
+		if (ps == IDLE) begin
+			counter = 4'b0000;
+		end else begin
+			counter++;
+			data_buffer[7:1] = data_buffer[6:0];
+			data_buffer[0] = data_i;
+			if (counter == 4'b1000) begin
+				data_o = data_buffer;
+			end
+		end
+	end
+endmodule
+
+module sipo_testbench();
+	logic sr_clk_i, rst_i, enable_i, data_i, busy_o;
+	logic [7:0] data_o;
+	sipo dut (.*);
+	
+	parameter CLOCK_PERIOD = 100;
+	initial begin
+		sr_clk_i <= 0;
+		forever #(CLOCK_PERIOD / 2) sr_clk_i <= ~sr_clk_i;
+	end
+	
+	initial begin
+		rst_i = 0; 					@(posedge sr_clk_i);
+		rst_i = 1; 					@(posedge sr_clk_i);
+		rst_i = 0; 					@(posedge sr_clk_i);
+									@(posedge sr_clk_i);
+									@(posedge sr_clk_i);
+		enable_i = 1; data_i = 1;	@(posedge sr_clk_i);
+		enable_i = 0; data_i = 0;	@(posedge sr_clk_i);
+		data_i = 1;					@(posedge sr_clk_i);
+		data_i = 1;					@(posedge sr_clk_i);
+		data_i = 0;					@(posedge sr_clk_i);
+		data_i = 1;					@(posedge sr_clk_i);
+		data_i = 1;					@(posedge sr_clk_i);
+		data_i = 0;					@(posedge sr_clk_i);
+									@(posedge sr_clk_i);
+									@(posedge sr_clk_i);
+									@(posedge sr_clk_i);
+									@(posedge sr_clk_i);
+									@(posedge sr_clk_i);
+		$stop;
+	end
+endmodule

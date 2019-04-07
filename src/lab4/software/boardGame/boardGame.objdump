@@ -1,0 +1,4056 @@
+
+boardGame.elf:     file format elf32-littlenios2
+boardGame.elf
+architecture: nios2:r1, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x00000020
+
+Program Header:
+    LOAD off    0x00001000 vaddr 0x00000000 paddr 0x00000000 align 2**12
+         filesz 0x00000020 memsz 0x00000020 flags r-x
+    LOAD off    0x00001020 vaddr 0x00000020 paddr 0x00000020 align 2**12
+         filesz 0x00002078 memsz 0x00002078 flags r-x
+    LOAD off    0x00003098 vaddr 0x00002098 paddr 0x000021f4 align 2**12
+         filesz 0x0000015c memsz 0x0000015c flags rw-
+    LOAD off    0x00003350 vaddr 0x00002350 paddr 0x00002350 align 2**12
+         filesz 0x00000000 memsz 0x0000009c flags rw-
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .entry        00000020  00000000  00000000  00001000  2**5
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .exceptions   00000000  00000020  00000020  000031f4  2**0
+                  CONTENTS
+  2 .text         00001dec  00000020  00000020  00001020  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .rodata       0000028c  00001e0c  00001e0c  00002e0c  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .rwdata       0000015c  00002098  000021f4  00003098  2**2
+                  CONTENTS, ALLOC, LOAD, DATA, SMALL_DATA
+  5 .bss          0000009c  00002350  00002350  00003350  2**2
+                  ALLOC, SMALL_DATA
+  6 .onchip_mem   00000000  000023ec  000023ec  000031f4  2**0
+                  CONTENTS
+  7 .comment      00000023  00000000  00000000  000031f4  2**0
+                  CONTENTS, READONLY
+  8 .debug_aranges 00000438  00000000  00000000  00003218  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_info   0000594f  00000000  00000000  00003650  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_abbrev 00001e3d  00000000  00000000  00008f9f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_line   000023b0  00000000  00000000  0000addc  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_frame  00000800  00000000  00000000  0000d18c  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_str    00001517  00000000  00000000  0000d98c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_loc    00002412  00000000  00000000  0000eea3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .debug_alt_sim_info 00000040  00000000  00000000  000112b8  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 16 .debug_ranges 000005d0  00000000  00000000  000112f8  2**3
+                  CONTENTS, READONLY, DEBUGGING
+ 17 .thread_model 00000003  00000000  00000000  00012f76  2**0
+                  CONTENTS, READONLY
+ 18 .cpu          00000003  00000000  00000000  00012f79  2**0
+                  CONTENTS, READONLY
+ 19 .qsys         00000001  00000000  00000000  00012f7c  2**0
+                  CONTENTS, READONLY
+ 20 .simulation_enabled 00000001  00000000  00000000  00012f7d  2**0
+                  CONTENTS, READONLY
+ 21 .stderr_dev   00000009  00000000  00000000  00012f7e  2**0
+                  CONTENTS, READONLY
+ 22 .stdin_dev    00000009  00000000  00000000  00012f87  2**0
+                  CONTENTS, READONLY
+ 23 .stdout_dev   00000009  00000000  00000000  00012f90  2**0
+                  CONTENTS, READONLY
+ 24 .sopc_system_name 00000005  00000000  00000000  00012f99  2**0
+                  CONTENTS, READONLY
+ 25 .quartus_project_dir 0000001c  00000000  00000000  00012f9e  2**0
+                  CONTENTS, READONLY
+ 26 .jdi          00003753  00000000  00000000  00012fba  2**0
+                  CONTENTS, READONLY
+ 27 .sopcinfo     0005d1e8  00000000  00000000  0001670d  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00000000 l    d  .entry	00000000 .entry
+00000020 l    d  .exceptions	00000000 .exceptions
+00000020 l    d  .text	00000000 .text
+00001e0c l    d  .rodata	00000000 .rodata
+00002098 l    d  .rwdata	00000000 .rwdata
+00002350 l    d  .bss	00000000 .bss
+000023ec l    d  .onchip_mem	00000000 .onchip_mem
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_loc	00000000 .debug_loc
+00000000 l    d  .debug_alt_sim_info	00000000 .debug_alt_sim_info
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    df *ABS*	00000000 ../boardGame_bsp//obj/HAL/src/crt0.o
+00000058 l       .text	00000000 alt_after_alt_main
+00000000 l    df *ABS*	00000000 main.c
+00000000 l    df *ABS*	00000000 reversInit.c
+00000000 l    df *ABS*	00000000 ticInit.c
+00000000 l    df *ABS*	00000000 lib2-divmod.c
+00000000 l    df *ABS*	00000000 lib2-mul.c
+00000000 l    df *ABS*	00000000 itoa.c
+00000000 l    df *ABS*	00000000 printf.c
+00000000 l    df *ABS*	00000000 utoa.c
+00000000 l    df *ABS*	00000000 vfprintf.c
+0000120c l     F .text	0000006c print_repeat
+00000000 l    df *ABS*	00000000 fvwrite_small_dev.c
+00000000 l    df *ABS*	00000000 impure.c
+00002098 l     O .rwdata	000000e0 impure_data
+00000000 l    df *ABS*	00000000 memcpy.c
+00000000 l    df *ABS*	00000000 strlen.c
+00000000 l    df *ABS*	00000000 writer.c
+00000000 l    df *ABS*	00000000 int_errno.c
+00000000 l    df *ABS*	00000000 alt_getchar.c
+00000000 l    df *ABS*	00000000 alt_load.c
+00000000 l    df *ABS*	00000000 alt_main.c
+00000000 l    df *ABS*	00000000 alt_printf.c
+00000000 l    df *ABS*	00000000 alt_putchar.c
+00000000 l    df *ABS*	00000000 alt_putstr.c
+00000000 l    df *ABS*	00000000 alt_usleep.c
+00000000 l    df *ABS*	00000000 alt_write.c
+00000000 l    df *ABS*	00000000 alt_sys_init.c
+00000000 l    df *ABS*	00000000 altera_avalon_jtag_uart_read.c
+00000000 l    df *ABS*	00000000 altera_avalon_jtag_uart_write.c
+00000000 l    df *ABS*	00000000 alt_busy_sleep.c
+00000000 l    df *ABS*	00000000 alt_dcache_flush_all.c
+00000000 l    df *ABS*	00000000 alt_dev.c
+00001df8 l     F .text	00000008 alt_dev_null_write
+00000000 l    df *ABS*	00000000 alt_errno.c
+00000000 l    df *ABS*	00000000 alt_icache_flush_all.c
+00000000 l    df *ABS*	00000000 altera_nios2_gen2_irq.c
+00002350 g     O .bss	00000004 winNumber
+00001a38 g     F .text	0000002c alt_main
+000021f4 g       *ABS*	00000000 __flash_rwdata_start
+00002354 g     O .bss	00000004 player1Win
+00000bdc g     F .text	00000064 stupid
+000010c0 g     F .text	0000004c printf
+00002398 g     O .bss	00000040 ticBoard
+00002358 g     O .bss	00000004 me
+0000235c g     O .bss	00000001 who
+00000544 g     F .text	0000007c flipLine
+0000099c g     F .text	000001ec ticCheckWin
+0000032c g     F .text	00000050 validMove
+00001c1c g     F .text	00000038 alt_putstr
+000021d8 g     O .rwdata	00000004 jtag_uart
+00001e04 g     F .text	00000008 altera_nios2_gen2_irq_init
+00000000 g     F .entry	0000000c __reset
+00000020 g       *ABS*	00000000 __flash_exceptions_start
+00002388 g     O .bss	00000004 errno
+00002360 g     O .bss	00000004 gameCapacity
+00002390 g     O .bss	00000004 alt_argv
+0000a1d0 g       *ABS*	00000000 _gp
+00001c54 g     F .text	00000004 usleep
+00000d18 g     F .text	00000124 ticUpdate
+00002178 g     O .rwdata	00000030 alt_fd_list
+00001878 g     F .text	00000028 memcpy
+00002364 g     O .bss	00000004 totalValidMoves
+00001cdc g     F .text	0000005c altera_avalon_jtag_uart_read
+00001084 g     F .text	0000003c _printf_r
+00000f34 g     F .text	00000064 .hidden __udivsi3
+00002368 g     O .bss	00000004 gameChoice
+0000236c g     O .bss	00000004 isWin
+00001080 g     F .text	00000004 itoa
+000021dc g     O .rwdata	00000004 alt_max_fd
+00000800 g     F .text	00000164 drawTicBoard
+000021d0 g     O .rwdata	00000004 _global_impure_ptr
+000023ec g       *ABS*	00000000 __bss_end
+00001914 g     F .text	00000044 alt_getchar
+00000c74 g     F .text	000000a4 send
+00000000 g       *ABS*	00000000 __alt_mem_onchip_mem
+000021a8 g     O .rwdata	00000028 alt_dev_null
+00002370 g     O .bss	00000001 other
+0000037c g     F .text	000001c8 calculateValidMoves
+00001df4 g     F .text	00000004 alt_dcache_flush_all
+00001208 g     F .text	00000004 utoa
+000021f4 g       *ABS*	00000000 __ram_rwdata_end
+000021e0 g     O .rwdata	00000008 alt_dev_list
+00001c58 g     F .text	00000060 write
+00002098 g       *ABS*	00000000 __ram_rodata_end
+00000f98 g     F .text	00000058 .hidden __umodsi3
+000023ec g       *ABS*	00000000 end
+00000b88 g     F .text	00000054 ticCheckOver
+00001018 g     F .text	00000068 __itoa
+000002d0 g     F .text	0000005c checkLineMatch
+000186a0 g       *ABS*	00000000 __alt_stack_pointer
+00001d38 g     F .text	00000034 altera_avalon_jtag_uart_write
+00001278 g     F .text	0000052c ___vfprintf_internal_r
+00001a64 g     F .text	00000170 alt_printf
+00000020 g     F .text	0000003c _start
+0000028c g     F .text	00000044 reverInit
+00001cd8 g     F .text	00000004 alt_sys_init
+0000078c g     F .text	00000074 ticInit
+000023d8 g     O .bss	00000014 buffer
+000005c0 g     F .text	000000e0 flipBoard
+00002374 g     O .bss	00000004 player2Win
+00000ff0 g     F .text	00000028 .hidden __mulsi3
+00002098 g       *ABS*	00000000 __ram_rwdata_start
+00001e0c g       *ABS*	00000000 __ram_rodata_start
+00002378 g     O .bss	00000004 biggest
+00001d6c g     F .text	00000088 alt_busy_sleep
+0000237c g     O .bss	00000004 reversiOver
+000023ec g       *ABS*	00000000 __alt_stack_base
+0000110c g     F .text	000000fc __utoa
+000017c0 g     F .text	000000b8 __sfvwrite_small_dev
+00002350 g       *ABS*	00000000 __bss_start
+0000005c g     F .text	00000230 main
+0000238c g     O .bss	00000004 alt_envp
+000021f0 g     O .rwdata	00000004 alt_errno
+000006a0 g     F .text	000000ec checkReversiOver
+00000e3c g     F .text	00000084 .hidden __divsi3
+00001e0c g       *ABS*	00000000 __flash_rodata_start
+00001cb8 g     F .text	00000020 alt_irq_init
+000018bc g     F .text	00000058 _write_r
+000021d4 g     O .rwdata	00000004 _impure_ptr
+00002394 g     O .bss	00000004 alt_argc
+00000c40 g     F .text	00000034 receive
+00002380 g     O .bss	00000004 currentPlayer
+000021e8 g     O .rwdata	00000008 alt_fs_list
+00000964 g     F .text	00000038 changeTicPlayer
+00000020 g       *ABS*	00000000 __ram_exceptions_start
+000021f4 g       *ABS*	00000000 _edata
+000023ec g       *ABS*	00000000 _end
+00000020 g       *ABS*	00000000 __ram_exceptions_end
+00000ec0 g     F .text	00000074 .hidden __modsi3
+000186a0 g       *ABS*	00000000 __alt_data_end
+0000000c g       .entry	00000000 _exit
+000018a0 g     F .text	0000001c strlen
+00001bd4 g     F .text	00000048 alt_putchar
+00002384 g     O .bss	00000004 isOver
+00001e00 g     F .text	00000004 alt_icache_flush_all
+000017a4 g     F .text	0000001c __vfprintf_internal
+00001958 g     F .text	000000e0 alt_load
+
+
+
+Disassembly of section .entry:
+
+00000000 <__reset>:
+ * Jump to the _start entry point in the .text section if reset code
+ * is allowed or if optimizing for RTL simulation.
+ */
+#if defined(ALT_ALLOW_CODE_AT_RESET) || defined(ALT_SIM_OPTIMIZE)
+    /* Jump to the _start entry point in the .text section. */
+    movhi r1, %hi(_start)
+   0:	00400034 	movhi	at,0
+    ori r1, r1, %lo(_start)
+   4:	08400814 	ori	at,at,32
+    jmp r1
+   8:	0800683a 	jmp	at
+
+0000000c <_exit>:
+	...
+
+Disassembly of section .text:
+
+00000020 <_start>:
+
+    /*
+     * Now that the caches are initialized, set up the stack pointer and global pointer.
+     * The values provided by the linker are assumed to be correctly aligned.
+     */
+    movhi sp, %hi(__alt_stack_pointer)
+      20:	06c00074 	movhi	sp,1
+    ori sp, sp, %lo(__alt_stack_pointer)
+      24:	dee1a814 	ori	sp,sp,34464
+    movhi gp, %hi(_gp)
+      28:	06800034 	movhi	gp,0
+    ori gp, gp, %lo(_gp)
+      2c:	d6a87414 	ori	gp,gp,41424
+ */
+#ifndef ALT_SIM_OPTIMIZE
+    /* Log that the BSS is about to be cleared. */
+    ALT_LOG_PUTS(alt_log_msg_bss)
+
+    movhi r2, %hi(__bss_start)
+      30:	00800034 	movhi	r2,0
+    ori r2, r2, %lo(__bss_start)
+      34:	1088d414 	ori	r2,r2,9040
+
+    movhi r3, %hi(__bss_end)
+      38:	00c00034 	movhi	r3,0
+    ori r3, r3, %lo(__bss_end)
+      3c:	18c8fb14 	ori	r3,r3,9196
+
+    beq r2, r3, 1f
+      40:	10c00326 	beq	r2,r3,50 <_start+0x30>
+
+0:
+    stw zero, (r2)
+      44:	10000015 	stw	zero,0(r2)
+    addi r2, r2, 4
+      48:	10800104 	addi	r2,r2,4
+    bltu r2, r3, 0b
+      4c:	10fffd36 	bltu	r2,r3,44 <__alt_data_end+0xfffe79a4>
+     * section aren't defined until alt_load() has been called).
+     */
+    mov   et, zero
+#endif
+
+    call alt_load
+      50:	00019580 	call	1958 <alt_load>
+
+    /* Log that alt_main is about to be called. */
+    ALT_LOG_PUTS(alt_log_msg_alt_main)
+
+    /* Call the C entry point. It should never return. */
+    call alt_main
+      54:	0001a380 	call	1a38 <alt_main>
+
+00000058 <alt_after_alt_main>:
+
+    /* Wait in infinite loop in case alt_main does return. */
+alt_after_alt_main:
+    br alt_after_alt_main
+      58:	003fff06 	br	58 <__alt_data_end+0xfffe79b8>
+
+0000005c <main>:
+#include "linker.h"
+int main()
+{
+    alt_printf("which player are you? (1 or 2) ");
+      5c:	01000034 	movhi	r4,0
+#include "linker.h"
+int main()
+{
+      60:	defffd04 	addi	sp,sp,-12
+    alt_printf("which player are you? (1 or 2) ");
+      64:	21078304 	addi	r4,r4,7692
+#include "linker.h"
+int main()
+{
+      68:	dfc00215 	stw	ra,8(sp)
+      6c:	dc000015 	stw	r16,0(sp)
+      70:	dc400115 	stw	r17,4(sp)
+    alt_printf("which player are you? (1 or 2) ");
+      74:	0001a640 	call	1a64 <alt_printf>
+    me = stupid() - '0';
+      78:	0000bdc0 	call	bdc <stupid>
+      7c:	10803fcc 	andi	r2,r2,255
+      80:	1080201c 	xori	r2,r2,128
+      84:	10bfe004 	addi	r2,r2,-128
+    itoa(me, buffer, 10);
+      88:	01400034 	movhi	r5,0
+#include "linker.h"
+int main()
+{
+    alt_printf("which player are you? (1 or 2) ");
+    me = stupid() - '0';
+      8c:	113ff404 	addi	r4,r2,-48
+    itoa(me, buffer, 10);
+      90:	01800284 	movi	r6,10
+      94:	2948f604 	addi	r5,r5,9176
+#include "linker.h"
+int main()
+{
+    alt_printf("which player are you? (1 or 2) ");
+    me = stupid() - '0';
+      98:	d1206215 	stw	r4,-32376(gp)
+    itoa(me, buffer, 10);
+      9c:	00010800 	call	1080 <itoa>
+    alt_printf("me is %s \n", buffer);
+      a0:	01400034 	movhi	r5,0
+      a4:	01000034 	movhi	r4,0
+      a8:	2948f604 	addi	r5,r5,9176
+      ac:	21078b04 	addi	r4,r4,7724
+      b0:	0001a640 	call	1a64 <alt_printf>
+    if(me != 1 && me != 2) {
+      b4:	d0a06217 	ldw	r2,-32376(gp)
+      b8:	04000044 	movi	r16,1
+      bc:	10bfffc4 	addi	r2,r2,-1
+      c0:	8080062e 	bgeu	r16,r2,dc <main+0x80>
+    	alt_printf("illegal input\n");
+      c4:	01000034 	movhi	r4,0
+      c8:	21078e04 	addi	r4,r4,7736
+      cc:	0001a640 	call	1a64 <alt_printf>
+    	alt_printf("game terminated, please reset\n");
+      d0:	01000034 	movhi	r4,0
+      d4:	21079204 	addi	r4,r4,7752
+      d8:	00006306 	br	268 <main+0x20c>
+    	return 1;
+    }
+    // choosing which game to play
+    int gameChoice;
+    alt_printf("which game do you want to play? 1:tic-tac-toe 2:Gomoku 3:Reversi\n");
+      dc:	01000034 	movhi	r4,0
+      e0:	21079a04 	addi	r4,r4,7784
+      e4:	0001a640 	call	1a64 <alt_printf>
+    gameChoice = stupid() - '0';
+      e8:	0000bdc0 	call	bdc <stupid>
+      ec:	10803fcc 	andi	r2,r2,255
+      f0:	1080201c 	xori	r2,r2,128
+      f4:	10bfe004 	addi	r2,r2,-128
+      f8:	147ff404 	addi	r17,r2,-48
+      fc:	008000c4 	movi	r2,3
+    if(gameChoice == 1) {
+     100:	8c00041e 	bne	r17,r16,114 <main+0xb8>
+        gameCapacity = 3;
+     104:	d0a06415 	stw	r2,-32368(gp)
+        winNumber = 3;
+     108:	d0a06015 	stw	r2,-32384(gp)
+        biggest = 9;
+     10c:	00800244 	movi	r2,9
+     110:	00000f06 	br	150 <main+0xf4>
+    } else if (gameChoice == 2){
+     114:	00c00084 	movi	r3,2
+     118:	88c0051e 	bne	r17,r3,130 <main+0xd4>
+        gameCapacity = 8;
+     11c:	00800204 	movi	r2,8
+     120:	d0a06415 	stw	r2,-32368(gp)
+        winNumber = 5;
+     124:	00800144 	movi	r2,5
+     128:	d0a06015 	stw	r2,-32384(gp)
+     12c:	00000706 	br	14c <main+0xf0>
+        biggest = 64;
+    } else if (gameChoice == 3) {
+     130:	88800f1e 	bne	r17,r2,170 <main+0x114>
+    	alt_printf("Please only use the legal moves\n");
+     134:	01000034 	movhi	r4,0
+     138:	2107ab04 	addi	r4,r4,7852
+     13c:	0001a640 	call	1a64 <alt_printf>
+        gameCapacity = 8;
+     140:	00800204 	movi	r2,8
+     144:	d0a06415 	stw	r2,-32368(gp)
+        winNumber = 0;
+     148:	d0206015 	stw	zero,-32384(gp)
+        biggest = 64;
+     14c:	00801004 	movi	r2,64
+     150:	d0a06a15 	stw	r2,-32344(gp)
+    	alt_printf("game not available. Please reset\n");
+    	return 1;
+    }
+
+    // initiate board before the game
+    if(gameChoice == 1 || gameChoice == 2) ticInit(ticBoard);
+     154:	00c00044 	movi	r3,1
+     158:	88bfffc4 	addi	r2,r17,-1
+     15c:	18800a36 	bltu	r3,r2,188 <main+0x12c>
+     160:	01000034 	movhi	r4,0
+     164:	2108e604 	addi	r4,r4,9112
+     168:	000078c0 	call	78c <ticInit>
+     16c:	00000706 	br	18c <main+0x130>
+    	alt_printf("Please only use the legal moves\n");
+        gameCapacity = 8;
+        winNumber = 0;
+        biggest = 64;
+    } else {
+    	alt_printf("illegal input\n");
+     170:	01000034 	movhi	r4,0
+     174:	21078e04 	addi	r4,r4,7736
+     178:	0001a640 	call	1a64 <alt_printf>
+    	alt_printf("game not available. Please reset\n");
+     17c:	01000034 	movhi	r4,0
+     180:	2107b404 	addi	r4,r4,7888
+     184:	00003806 	br	268 <main+0x20c>
+    	return 1;
+    }
+
+    // initiate board before the game
+    if(gameChoice == 1 || gameChoice == 2) ticInit(ticBoard);
+    else reverInit();
+     188:	000028c0 	call	28c <reverInit>
+    drawTicBoard();
+     18c:	00008000 	call	800 <drawTicBoard>
+     190:	040000c4 	movi	r16,3
+    isWin = 0;
+     194:	d0206715 	stw	zero,-32356(gp)
+    isOver = 0;
+     198:	d0206d15 	stw	zero,-32332(gp)
+    reversiOver = 0;
+     19c:	d0206b15 	stw	zero,-32340(gp)
+    // gameStart each iteration of the while loop is one round
+    while(!(isWin || isOver || reversiOver)) {
+     1a0:	d0a06717 	ldw	r2,-32356(gp)
+     1a4:	1000211e 	bne	r2,zero,22c <main+0x1d0>
+     1a8:	d0a06d17 	ldw	r2,-32332(gp)
+     1ac:	10001f1e 	bne	r2,zero,22c <main+0x1d0>
+     1b0:	d0a06b17 	ldw	r2,-32340(gp)
+     1b4:	10001d1e 	bne	r2,zero,22c <main+0x1d0>
+        if(gameChoice == 3) calculateValidMoves();
+     1b8:	8c00011e 	bne	r17,r16,1c0 <main+0x164>
+     1bc:	000037c0 	call	37c <calculateValidMoves>
+        ticUpdate(currentPlayer, gameChoice);
+     1c0:	d1206c17 	ldw	r4,-32336(gp)
+     1c4:	880b883a 	mov	r5,r17
+     1c8:	0000d180 	call	d18 <ticUpdate>
+        drawTicBoard();
+     1cc:	00008000 	call	800 <drawTicBoard>
+        // checking win/ loose condition for tic-tac-toe and gomoku
+        if(gameChoice != 3) {
+     1d0:	8c001226 	beq	r17,r16,21c <main+0x1c0>
+            player1Win = ticCheckWin(1, winNumber);
+     1d4:	d1606017 	ldw	r5,-32384(gp)
+     1d8:	01000044 	movi	r4,1
+     1dc:	000099c0 	call	99c <ticCheckWin>
+            player2Win = ticCheckWin(2, winNumber);
+     1e0:	d1606017 	ldw	r5,-32384(gp)
+     1e4:	01000084 	movi	r4,2
+        if(gameChoice == 3) calculateValidMoves();
+        ticUpdate(currentPlayer, gameChoice);
+        drawTicBoard();
+        // checking win/ loose condition for tic-tac-toe and gomoku
+        if(gameChoice != 3) {
+            player1Win = ticCheckWin(1, winNumber);
+     1e8:	d0a06115 	stw	r2,-32380(gp)
+            player2Win = ticCheckWin(2, winNumber);
+     1ec:	000099c0 	call	99c <ticCheckWin>
+            isWin = player1Win || player2Win;
+     1f0:	d0e06117 	ldw	r3,-32380(gp)
+        ticUpdate(currentPlayer, gameChoice);
+        drawTicBoard();
+        // checking win/ loose condition for tic-tac-toe and gomoku
+        if(gameChoice != 3) {
+            player1Win = ticCheckWin(1, winNumber);
+            player2Win = ticCheckWin(2, winNumber);
+     1f4:	d0a06915 	stw	r2,-32348(gp)
+            isWin = player1Win || player2Win;
+     1f8:	1800021e 	bne	r3,zero,204 <main+0x1a8>
+     1fc:	1004c03a 	cmpne	r2,r2,zero
+     200:	00000106 	br	208 <main+0x1ac>
+     204:	00800044 	movi	r2,1
+     208:	d0a06715 	stw	r2,-32356(gp)
+            if(!isWin) {
+     20c:	1000051e 	bne	r2,zero,224 <main+0x1c8>
+                isOver = ticCheckOver();
+     210:	0000b880 	call	b88 <ticCheckOver>
+     214:	d0a06d15 	stw	r2,-32332(gp)
+     218:	00000206 	br	224 <main+0x1c8>
+            }
+        // check win / loose condition for reversi
+        } else {
+            reversiOver = checkReversiOver();
+     21c:	00006a00 	call	6a0 <checkReversiOver>
+     220:	d0a06b15 	stw	r2,-32340(gp)
+        }
+        changeTicPlayer();
+     224:	00009640 	call	964 <changeTicPlayer>
+     228:	003fdd06 	br	1a0 <__alt_data_end+0xfffe7b00>
+    }
+
+    // print who wins for tic-tac-toe and gomoku
+    if(gameChoice != 3)
+     22c:	008000c4 	movi	r2,3
+     230:	88800f26 	beq	r17,r2,270 <main+0x214>
+    {
+        if(player1Win)
+     234:	d0a06117 	ldw	r2,-32380(gp)
+     238:	10000326 	beq	r2,zero,248 <main+0x1ec>
+        {
+            alt_printf ("Congratulations! player1 win! ");
+     23c:	01000034 	movhi	r4,0
+     240:	2107bd04 	addi	r4,r4,7924
+     244:	00000406 	br	258 <main+0x1fc>
+        }
+        else if (player2Win)
+     248:	d4206917 	ldw	r16,-32348(gp)
+     24c:	80000426 	beq	r16,zero,260 <main+0x204>
+        {
+            alt_printf ("Congratulations! player2 win! ");
+     250:	01000034 	movhi	r4,0
+     254:	2107c504 	addi	r4,r4,7956
+     258:	0001a640 	call	1a64 <alt_printf>
+     25c:	00000406 	br	270 <main+0x214>
+        }
+        else
+        {
+            alt_printf("nobody wins. Game Over");
+     260:	01000034 	movhi	r4,0
+     264:	2107cd04 	addi	r4,r4,7988
+     268:	0001a640 	call	1a64 <alt_printf>
+     26c:	00000106 	br	274 <main+0x218>
+        }
+    }
+    return 0;
+     270:	0021883a 	mov	r16,zero
+}
+     274:	8005883a 	mov	r2,r16
+     278:	dfc00217 	ldw	ra,8(sp)
+     27c:	dc400117 	ldw	r17,4(sp)
+     280:	dc000017 	ldw	r16,0(sp)
+     284:	dec00304 	addi	sp,sp,12
+     288:	f800283a 	ret
+
+0000028c <reverInit>:
+#include "linker.h"
+void reverInit() {
+     28c:	defffe04 	addi	sp,sp,-8
+     290:	dc000015 	stw	r16,0(sp)
+    ticInit(ticBoard);
+     294:	04000034 	movhi	r16,0
+     298:	8408e604 	addi	r16,r16,9112
+     29c:	8009883a 	mov	r4,r16
+#include "linker.h"
+void reverInit() {
+     2a0:	dfc00115 	stw	ra,4(sp)
+    ticInit(ticBoard);
+     2a4:	000078c0 	call	78c <ticInit>
+    ticBoard[3][3] = 'X';
+     2a8:	00801604 	movi	r2,88
+     2ac:	808006c5 	stb	r2,27(r16)
+    ticBoard[4][4] = 'X';
+     2b0:	80800905 	stb	r2,36(r16)
+    ticBoard[3][4] = 'O';
+     2b4:	008013c4 	movi	r2,79
+     2b8:	80800705 	stb	r2,28(r16)
+    ticBoard[4][3] = 'O';
+     2bc:	808008c5 	stb	r2,35(r16)
+    return;
+}
+     2c0:	dfc00117 	ldw	ra,4(sp)
+     2c4:	dc000017 	ldw	r16,0(sp)
+     2c8:	dec00204 	addi	sp,sp,8
+     2cc:	f800283a 	ret
+
+000002d0 <checkLineMatch>:
+    return checkLineMatch(dr, dc, row + dr + dr, column + dc + dc);
+}
+
+// check if there is current player's mark at this position or
+// anywhere further
+int checkLineMatch(int dr, int dc, int row, int column) {
+     2d0:	300490fa 	slli	r2,r6,3
+     2d4:	200690fa 	slli	r3,r4,3
+    if(ticBoard[row][column] == who) return 1;
+     2d8:	d2a06303 	ldbu	r10,-32372(gp)
+     2dc:	11d1883a 	add	r8,r2,r7
+     2e0:	00800034 	movhi	r2,0
+     2e4:	1088e604 	addi	r2,r2,9112
+     2e8:	4085883a 	add	r2,r8,r2
+     2ec:	1947883a 	add	r3,r3,r5
+    if(ticBoard[row][column] < 64) return 0;
+     2f0:	02c00fc4 	movi	r11,63
+    if((row + dr < 0) || (row + dr > 7)) return 0;
+     2f4:	020001c4 	movi	r8,7
+}
+
+// check if there is current player's mark at this position or
+// anywhere further
+int checkLineMatch(int dr, int dc, int row, int column) {
+    if(ticBoard[row][column] == who) return 1;
+     2f8:	12400003 	ldbu	r9,0(r2)
+     2fc:	4a800726 	beq	r9,r10,31c <checkLineMatch+0x4c>
+    if(ticBoard[row][column] < 64) return 0;
+     300:	5a40082e 	bgeu	r11,r9,324 <checkLineMatch+0x54>
+    if((row + dr < 0) || (row + dr > 7)) return 0;
+     304:	310d883a 	add	r6,r6,r4
+     308:	41800636 	bltu	r8,r6,324 <checkLineMatch+0x54>
+    if((column + dc < 0) || (column + dc > 7)) return 0;
+     30c:	394f883a 	add	r7,r7,r5
+     310:	10c5883a 	add	r2,r2,r3
+     314:	41fff82e 	bgeu	r8,r7,2f8 <__alt_data_end+0xfffe7c58>
+     318:	00000206 	br	324 <checkLineMatch+0x54>
+}
+
+// check if there is current player's mark at this position or
+// anywhere further
+int checkLineMatch(int dr, int dc, int row, int column) {
+    if(ticBoard[row][column] == who) return 1;
+     31c:	00800044 	movi	r2,1
+     320:	f800283a 	ret
+    if(ticBoard[row][column] < 64) return 0;
+     324:	0005883a 	mov	r2,zero
+    if((row + dr < 0) || (row + dr > 7)) return 0;
+    if((column + dc < 0) || (column + dc > 7)) return 0;
+    return checkLineMatch(dr, dc, row + dr, column + dc);
+}
+     328:	f800283a 	ret
+
+0000032c <validMove>:
+}
+
+// check the current position contains the mark of current player's opponent
+// on the board in the intended direction
+int validMove(int dr, int dc, int row, int column) {
+    if((row + dr < 0) || (row + dr >7)) return 0;
+     32c:	310d883a 	add	r6,r6,r4
+     330:	00c001c4 	movi	r3,7
+     334:	19800f36 	bltu	r3,r6,374 <validMove+0x48>
+    if((column + dc < 0) || (column + dc > 7)) return 0;
+     338:	394f883a 	add	r7,r7,r5
+     33c:	19c00d36 	bltu	r3,r7,374 <validMove+0x48>
+    if(ticBoard[row + dr][column + dc] != other) return 0;
+     340:	300490fa 	slli	r2,r6,3
+     344:	02800034 	movhi	r10,0
+     348:	5288e604 	addi	r10,r10,9112
+     34c:	5085883a 	add	r2,r10,r2
+     350:	11c5883a 	add	r2,r2,r7
+     354:	12800003 	ldbu	r10,0(r2)
+     358:	d0a06803 	ldbu	r2,-32352(gp)
+     35c:	5080051e 	bne	r10,r2,374 <validMove+0x48>
+    if((row + dr + dr < 0) || (row + dr + dr >7)) return 0;
+     360:	218d883a 	add	r6,r4,r6
+     364:	19800336 	bltu	r3,r6,374 <validMove+0x48>
+    if((column + dc + dc < 0) || (column + dc + dc > 7)) return 0;
+     368:	29cf883a 	add	r7,r5,r7
+     36c:	19c00136 	bltu	r3,r7,374 <validMove+0x48>
+    return checkLineMatch(dr, dc, row + dr + dr, column + dc + dc);
+     370:	00002d01 	jmpi	2d0 <checkLineMatch>
+}
+     374:	0005883a 	mov	r2,zero
+     378:	f800283a 	ret
+
+0000037c <calculateValidMoves>:
+    ticBoard[3][4] = 'O';
+    ticBoard[4][3] = 'O';
+    return;
+}
+
+void calculateValidMoves() {
+     37c:	defff204 	addi	sp,sp,-56
+     380:	dcc00715 	stw	r19,28(sp)
+    totalValidMoves = 0;
+    for (int row = 0; row < 8; row++) {
+        for(int column = 0; column < 8; column++) {
+            if(ticBoard[row][column] <= 64) {
+     384:	04c00034 	movhi	r19,0
+    ticBoard[3][4] = 'O';
+    ticBoard[4][3] = 'O';
+    return;
+}
+
+void calculateValidMoves() {
+     388:	dd000815 	stw	r20,32(sp)
+     38c:	dc400515 	stw	r17,20(sp)
+     390:	dfc00d15 	stw	ra,52(sp)
+     394:	df000c15 	stw	fp,48(sp)
+     398:	ddc00b15 	stw	r23,44(sp)
+     39c:	dd800a15 	stw	r22,40(sp)
+     3a0:	dd400915 	stw	r21,36(sp)
+     3a4:	dc800615 	stw	r18,24(sp)
+     3a8:	dc000415 	stw	r16,16(sp)
+    totalValidMoves = 0;
+     3ac:	d0206515 	stw	zero,-32364(gp)
+    for (int row = 0; row < 8; row++) {
+     3b0:	0023883a 	mov	r17,zero
+        for(int column = 0; column < 8; column++) {
+            if(ticBoard[row][column] <= 64) {
+     3b4:	9cc8e604 	addi	r19,r19,9112
+     3b8:	05001004 	movi	r20,64
+     3bc:	882490fa 	slli	r18,r17,3
+    ticBoard[3][4] = 'O';
+    ticBoard[4][3] = 'O';
+    return;
+}
+
+void calculateValidMoves() {
+     3c0:	0021883a 	mov	r16,zero
+    totalValidMoves = 0;
+    for (int row = 0; row < 8; row++) {
+        for(int column = 0; column < 8; column++) {
+            if(ticBoard[row][column] <= 64) {
+     3c4:	8485883a 	add	r2,r16,r18
+     3c8:	14c5883a 	add	r2,r2,r19
+     3cc:	15400003 	ldbu	r21,0(r2)
+     3d0:	a5404b36 	bltu	r20,r21,500 <calculateValidMoves+0x184>
+                int nw = validMove(-1, -1, row, column);
+     3d4:	017fffc4 	movi	r5,-1
+     3d8:	2809883a 	mov	r4,r5
+     3dc:	800f883a 	mov	r7,r16
+     3e0:	880d883a 	mov	r6,r17
+     3e4:	000032c0 	call	32c <validMove>
+                int nn = validMove(-1, 0, row, column);
+     3e8:	800f883a 	mov	r7,r16
+     3ec:	880d883a 	mov	r6,r17
+     3f0:	000b883a 	mov	r5,zero
+     3f4:	013fffc4 	movi	r4,-1
+     3f8:	d8800315 	stw	r2,12(sp)
+     3fc:	000032c0 	call	32c <validMove>
+                int ne = validMove(-1, 1, row, column);
+     400:	800f883a 	mov	r7,r16
+     404:	880d883a 	mov	r6,r17
+     408:	01400044 	movi	r5,1
+     40c:	013fffc4 	movi	r4,-1
+     410:	d8800215 	stw	r2,8(sp)
+     414:	000032c0 	call	32c <validMove>
+
+                int ww = validMove(0, -1, row, column);
+     418:	800f883a 	mov	r7,r16
+     41c:	880d883a 	mov	r6,r17
+     420:	017fffc4 	movi	r5,-1
+     424:	0009883a 	mov	r4,zero
+     428:	d8800115 	stw	r2,4(sp)
+     42c:	000032c0 	call	32c <validMove>
+                int ee = validMove(0, 1, row, column);
+     430:	800f883a 	mov	r7,r16
+     434:	880d883a 	mov	r6,r17
+     438:	01400044 	movi	r5,1
+     43c:	0009883a 	mov	r4,zero
+     440:	d8800015 	stw	r2,0(sp)
+     444:	000032c0 	call	32c <validMove>
+
+                int sw = validMove(1, -1, row, column);
+     448:	800f883a 	mov	r7,r16
+     44c:	880d883a 	mov	r6,r17
+     450:	017fffc4 	movi	r5,-1
+     454:	01000044 	movi	r4,1
+                int nw = validMove(-1, -1, row, column);
+                int nn = validMove(-1, 0, row, column);
+                int ne = validMove(-1, 1, row, column);
+
+                int ww = validMove(0, -1, row, column);
+                int ee = validMove(0, 1, row, column);
+     458:	1039883a 	mov	fp,r2
+
+                int sw = validMove(1, -1, row, column);
+     45c:	000032c0 	call	32c <validMove>
+                int ss = validMove(1, 0, row, column);
+     460:	800f883a 	mov	r7,r16
+     464:	880d883a 	mov	r6,r17
+     468:	000b883a 	mov	r5,zero
+     46c:	01000044 	movi	r4,1
+                int ne = validMove(-1, 1, row, column);
+
+                int ww = validMove(0, -1, row, column);
+                int ee = validMove(0, 1, row, column);
+
+                int sw = validMove(1, -1, row, column);
+     470:	102f883a 	mov	r23,r2
+                int ss = validMove(1, 0, row, column);
+     474:	000032c0 	call	32c <validMove>
+                int se = validMove(1, 1, row, column);
+     478:	01400044 	movi	r5,1
+     47c:	800f883a 	mov	r7,r16
+     480:	880d883a 	mov	r6,r17
+     484:	2809883a 	mov	r4,r5
+
+                int ww = validMove(0, -1, row, column);
+                int ee = validMove(0, 1, row, column);
+
+                int sw = validMove(1, -1, row, column);
+                int ss = validMove(1, 0, row, column);
+     488:	102d883a 	mov	r22,r2
+                int se = validMove(1, 1, row, column);
+     48c:	000032c0 	call	32c <validMove>
+                if(nw || nn || ne || ww || ee || sw || ss || se) {
+     490:	da800317 	ldw	r10,12(sp)
+     494:	d8c00017 	ldw	r3,0(sp)
+     498:	da000117 	ldw	r8,4(sp)
+     49c:	da400217 	ldw	r9,8(sp)
+     4a0:	5000071e 	bne	r10,zero,4c0 <calculateValidMoves+0x144>
+     4a4:	4800061e 	bne	r9,zero,4c0 <calculateValidMoves+0x144>
+     4a8:	4000051e 	bne	r8,zero,4c0 <calculateValidMoves+0x144>
+     4ac:	1800041e 	bne	r3,zero,4c0 <calculateValidMoves+0x144>
+     4b0:	e000031e 	bne	fp,zero,4c0 <calculateValidMoves+0x144>
+     4b4:	b800021e 	bne	r23,zero,4c0 <calculateValidMoves+0x144>
+     4b8:	b000011e 	bne	r22,zero,4c0 <calculateValidMoves+0x144>
+     4bc:	10001026 	beq	r2,zero,500 <calculateValidMoves+0x184>
+                	itoa(ticBoard[row][column], buffer, 10);
+     4c0:	01400034 	movhi	r5,0
+     4c4:	01800284 	movi	r6,10
+     4c8:	2948f604 	addi	r5,r5,9176
+     4cc:	a809883a 	mov	r4,r21
+     4d0:	00010800 	call	1080 <itoa>
+                	if(currentPlayer == me) alt_printf("legal move position detected: %s\n", buffer);
+     4d4:	d0a06217 	ldw	r2,-32376(gp)
+     4d8:	d0e06c17 	ldw	r3,-32336(gp)
+     4dc:	1880051e 	bne	r3,r2,4f4 <calculateValidMoves+0x178>
+     4e0:	01400034 	movhi	r5,0
+     4e4:	01000034 	movhi	r4,0
+     4e8:	2948f604 	addi	r5,r5,9176
+     4ec:	2107d304 	addi	r4,r4,8012
+     4f0:	0001a640 	call	1a64 <alt_printf>
+                    totalValidMoves++;
+     4f4:	d0a06517 	ldw	r2,-32364(gp)
+     4f8:	10800044 	addi	r2,r2,1
+     4fc:	d0a06515 	stw	r2,-32364(gp)
+}
+
+void calculateValidMoves() {
+    totalValidMoves = 0;
+    for (int row = 0; row < 8; row++) {
+        for(int column = 0; column < 8; column++) {
+     500:	84000044 	addi	r16,r16,1
+     504:	00800204 	movi	r2,8
+     508:	80bfae1e 	bne	r16,r2,3c4 <__alt_data_end+0xfffe7d24>
+    return;
+}
+
+void calculateValidMoves() {
+    totalValidMoves = 0;
+    for (int row = 0; row < 8; row++) {
+     50c:	8c400044 	addi	r17,r17,1
+     510:	8c3faa1e 	bne	r17,r16,3bc <__alt_data_end+0xfffe7d1c>
+                }
+            }
+        }
+    }
+    return;
+}
+     514:	dfc00d17 	ldw	ra,52(sp)
+     518:	df000c17 	ldw	fp,48(sp)
+     51c:	ddc00b17 	ldw	r23,44(sp)
+     520:	dd800a17 	ldw	r22,40(sp)
+     524:	dd400917 	ldw	r21,36(sp)
+     528:	dd000817 	ldw	r20,32(sp)
+     52c:	dcc00717 	ldw	r19,28(sp)
+     530:	dc800617 	ldw	r18,24(sp)
+     534:	dc400517 	ldw	r17,20(sp)
+     538:	dc000417 	ldw	r16,16(sp)
+     53c:	dec00e04 	addi	sp,sp,56
+     540:	f800283a 	ret
+
+00000544 <flipLine>:
+    if((column + dc < 0) || (column + dc > 7)) return 0;
+    return checkLineMatch(dr, dc, row + dr, column + dc);
+}
+
+int flipLine(int dr, int dc, int row, int column) {
+    if((row + dr < 0) || (row + dr >7)) return 0;
+     544:	310d883a 	add	r6,r6,r4
+     548:	00c001c4 	movi	r3,7
+     54c:	19801a36 	bltu	r3,r6,5b8 <flipLine+0x74>
+    if((column + dc < 0) || (column + dc > 7)) return 0;
+     550:	394f883a 	add	r7,r7,r5
+     554:	19c01836 	bltu	r3,r7,5b8 <flipLine+0x74>
+    if((row + dr < 0) || (row + dr > 7)) return 0;
+    if((column + dc < 0) || (column + dc > 7)) return 0;
+    return checkLineMatch(dr, dc, row + dr, column + dc);
+}
+
+int flipLine(int dr, int dc, int row, int column) {
+     558:	defffe04 	addi	sp,sp,-8
+    if((row + dr < 0) || (row + dr >7)) return 0;
+    if((column + dc < 0) || (column + dc > 7)) return 0;
+    if(ticBoard[row + dr][column + dc] <= 64) return 0;
+     55c:	300490fa 	slli	r2,r6,3
+    if((row + dr < 0) || (row + dr > 7)) return 0;
+    if((column + dc < 0) || (column + dc > 7)) return 0;
+    return checkLineMatch(dr, dc, row + dr, column + dc);
+}
+
+int flipLine(int dr, int dc, int row, int column) {
+     560:	dc000015 	stw	r16,0(sp)
+    if((row + dr < 0) || (row + dr >7)) return 0;
+    if((column + dc < 0) || (column + dc > 7)) return 0;
+    if(ticBoard[row + dr][column + dc] <= 64) return 0;
+     564:	04000034 	movhi	r16,0
+     568:	8408e604 	addi	r16,r16,9112
+     56c:	80a1883a 	add	r16,r16,r2
+    if((row + dr < 0) || (row + dr > 7)) return 0;
+    if((column + dc < 0) || (column + dc > 7)) return 0;
+    return checkLineMatch(dr, dc, row + dr, column + dc);
+}
+
+int flipLine(int dr, int dc, int row, int column) {
+     570:	dfc00115 	stw	ra,4(sp)
+    if((row + dr < 0) || (row + dr >7)) return 0;
+    if((column + dc < 0) || (column + dc > 7)) return 0;
+    if(ticBoard[row + dr][column + dc] <= 64) return 0;
+     574:	81e1883a 	add	r16,r16,r7
+     578:	80800003 	ldbu	r2,0(r16)
+     57c:	00c01004 	movi	r3,64
+     580:	18800236 	bltu	r3,r2,58c <flipLine+0x48>
+    if((column + dc < 0) || (column + dc > 7)) return 0;
+    return checkLineMatch(dr, dc, row + dr, column + dc);
+}
+
+int flipLine(int dr, int dc, int row, int column) {
+    if((row + dr < 0) || (row + dr >7)) return 0;
+     584:	0005883a 	mov	r2,zero
+     588:	00000706 	br	5a8 <flipLine+0x64>
+    if((column + dc < 0) || (column + dc > 7)) return 0;
+    if(ticBoard[row + dr][column + dc] <= 64) return 0;
+    if(ticBoard[row + dr][column + dc] == who) return 1;
+     58c:	d0e06303 	ldbu	r3,-32372(gp)
+     590:	10c00426 	beq	r2,r3,5a4 <flipLine+0x60>
+    else {
+        if (flipLine(dr, dc, row+dr, column+dc)) {
+     594:	00005440 	call	544 <flipLine>
+     598:	103ffa26 	beq	r2,zero,584 <__alt_data_end+0xfffe7ee4>
+            ticBoard[row+dr][column + dc] = who;
+     59c:	d0a06303 	ldbu	r2,-32372(gp)
+     5a0:	80800005 	stb	r2,0(r16)
+
+int flipLine(int dr, int dc, int row, int column) {
+    if((row + dr < 0) || (row + dr >7)) return 0;
+    if((column + dc < 0) || (column + dc > 7)) return 0;
+    if(ticBoard[row + dr][column + dc] <= 64) return 0;
+    if(ticBoard[row + dr][column + dc] == who) return 1;
+     5a4:	00800044 	movi	r2,1
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+}
+     5a8:	dfc00117 	ldw	ra,4(sp)
+     5ac:	dc000017 	ldw	r16,0(sp)
+     5b0:	dec00204 	addi	sp,sp,8
+     5b4:	f800283a 	ret
+    if((column + dc < 0) || (column + dc > 7)) return 0;
+    return checkLineMatch(dr, dc, row + dr, column + dc);
+}
+
+int flipLine(int dr, int dc, int row, int column) {
+    if((row + dr < 0) || (row + dr >7)) return 0;
+     5b8:	0005883a 	mov	r2,zero
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+}
+     5bc:	f800283a 	ret
+
+000005c0 <flipBoard>:
+
+void flipBoard(int row, int column) {
+     5c0:	defffb04 	addi	sp,sp,-20
+     5c4:	dc800215 	stw	r18,8(sp)
+    flipLine(-1, -1, row, column);
+     5c8:	04bfffc4 	movi	r18,-1
+            return 0;
+        }
+    }
+}
+
+void flipBoard(int row, int column) {
+     5cc:	dc400115 	stw	r17,4(sp)
+     5d0:	dc000015 	stw	r16,0(sp)
+     5d4:	2823883a 	mov	r17,r5
+     5d8:	2021883a 	mov	r16,r4
+    flipLine(-1, -1, row, column);
+     5dc:	280f883a 	mov	r7,r5
+     5e0:	200d883a 	mov	r6,r4
+     5e4:	900b883a 	mov	r5,r18
+     5e8:	9009883a 	mov	r4,r18
+            return 0;
+        }
+    }
+}
+
+void flipBoard(int row, int column) {
+     5ec:	dfc00415 	stw	ra,16(sp)
+     5f0:	dcc00315 	stw	r19,12(sp)
+    flipLine(-1, -1, row, column);
+     5f4:	00005440 	call	544 <flipLine>
+    flipLine(-1, 0, row, column);
+     5f8:	880f883a 	mov	r7,r17
+     5fc:	800d883a 	mov	r6,r16
+     600:	9009883a 	mov	r4,r18
+     604:	000b883a 	mov	r5,zero
+    flipLine(-1, 1, row, column);
+     608:	04c00044 	movi	r19,1
+    }
+}
+
+void flipBoard(int row, int column) {
+    flipLine(-1, -1, row, column);
+    flipLine(-1, 0, row, column);
+     60c:	00005440 	call	544 <flipLine>
+    flipLine(-1, 1, row, column);
+     610:	880f883a 	mov	r7,r17
+     614:	800d883a 	mov	r6,r16
+     618:	980b883a 	mov	r5,r19
+     61c:	9009883a 	mov	r4,r18
+     620:	00005440 	call	544 <flipLine>
+    flipLine(0, -1, row, column);
+     624:	880f883a 	mov	r7,r17
+     628:	800d883a 	mov	r6,r16
+     62c:	900b883a 	mov	r5,r18
+     630:	0009883a 	mov	r4,zero
+     634:	00005440 	call	544 <flipLine>
+    flipLine(0, 1, row, column);
+     638:	880f883a 	mov	r7,r17
+     63c:	800d883a 	mov	r6,r16
+     640:	980b883a 	mov	r5,r19
+     644:	0009883a 	mov	r4,zero
+     648:	00005440 	call	544 <flipLine>
+    flipLine(1, -1, row, column);
+     64c:	880f883a 	mov	r7,r17
+     650:	800d883a 	mov	r6,r16
+     654:	900b883a 	mov	r5,r18
+     658:	9809883a 	mov	r4,r19
+     65c:	00005440 	call	544 <flipLine>
+    flipLine(1, 0, row, column);
+     660:	880f883a 	mov	r7,r17
+     664:	800d883a 	mov	r6,r16
+     668:	9809883a 	mov	r4,r19
+     66c:	000b883a 	mov	r5,zero
+     670:	00005440 	call	544 <flipLine>
+    flipLine(1, 1, row, column);
+     674:	880f883a 	mov	r7,r17
+     678:	800d883a 	mov	r6,r16
+     67c:	980b883a 	mov	r5,r19
+     680:	9809883a 	mov	r4,r19
+}
+     684:	dfc00417 	ldw	ra,16(sp)
+     688:	dcc00317 	ldw	r19,12(sp)
+     68c:	dc800217 	ldw	r18,8(sp)
+     690:	dc400117 	ldw	r17,4(sp)
+     694:	dc000017 	ldw	r16,0(sp)
+     698:	dec00504 	addi	sp,sp,20
+    flipLine(-1, 1, row, column);
+    flipLine(0, -1, row, column);
+    flipLine(0, 1, row, column);
+    flipLine(1, -1, row, column);
+    flipLine(1, 0, row, column);
+    flipLine(1, 1, row, column);
+     69c:	00005441 	jmpi	544 <flipLine>
+
+000006a0 <checkReversiOver>:
+}
+
+int checkReversiOver() {
+    int player1 = 0;
+    int player2 = 0;
+    for(int row = 0; row < gameCapacity; row++) {
+     6a0:	d1a06417 	ldw	r6,-32368(gp)
+    flipLine(1, -1, row, column);
+    flipLine(1, 0, row, column);
+    flipLine(1, 1, row, column);
+}
+
+int checkReversiOver() {
+     6a4:	defff304 	addi	sp,sp,-52
+    int player1 = 0;
+    int player2 = 0;
+    for(int row = 0; row < gameCapacity; row++) {
+        for(int column = 0; column < gameCapacity; column++){
+            if(ticBoard[row][column] == 'X') {
+     6a8:	02000034 	movhi	r8,0
+    flipLine(1, -1, row, column);
+    flipLine(1, 0, row, column);
+    flipLine(1, 1, row, column);
+}
+
+int checkReversiOver() {
+     6ac:	dc400b15 	stw	r17,44(sp)
+     6b0:	dfc00c15 	stw	ra,48(sp)
+     6b4:	dc000a15 	stw	r16,40(sp)
+    int player1 = 0;
+    int player2 = 0;
+    for(int row = 0; row < gameCapacity; row++) {
+     6b8:	0007883a 	mov	r3,zero
+    flipLine(1, 1, row, column);
+}
+
+int checkReversiOver() {
+    int player1 = 0;
+    int player2 = 0;
+     6bc:	0023883a 	mov	r17,zero
+    flipLine(1, 0, row, column);
+    flipLine(1, 1, row, column);
+}
+
+int checkReversiOver() {
+    int player1 = 0;
+     6c0:	0009883a 	mov	r4,zero
+    int player2 = 0;
+    for(int row = 0; row < gameCapacity; row++) {
+        for(int column = 0; column < gameCapacity; column++){
+            if(ticBoard[row][column] == 'X') {
+     6c4:	4208e604 	addi	r8,r8,9112
+     6c8:	02401604 	movi	r9,88
+                player1++;
+            }
+            if(ticBoard[row][column] == 'O') {
+     6cc:	028013c4 	movi	r10,79
+}
+
+int checkReversiOver() {
+    int player1 = 0;
+    int player2 = 0;
+    for(int row = 0; row < gameCapacity; row++) {
+     6d0:	19800f0e 	bge	r3,r6,710 <checkReversiOver+0x70>
+     6d4:	180e90fa 	slli	r7,r3,3
+     6d8:	0005883a 	mov	r2,zero
+        for(int column = 0; column < gameCapacity; column++){
+     6dc:	11800a0e 	bge	r2,r6,708 <checkReversiOver+0x68>
+            if(ticBoard[row][column] == 'X') {
+     6e0:	11cb883a 	add	r5,r2,r7
+     6e4:	2a0b883a 	add	r5,r5,r8
+     6e8:	29400003 	ldbu	r5,0(r5)
+     6ec:	2a40021e 	bne	r5,r9,6f8 <checkReversiOver+0x58>
+                player1++;
+     6f0:	21000044 	addi	r4,r4,1
+     6f4:	00000206 	br	700 <checkReversiOver+0x60>
+            }
+            if(ticBoard[row][column] == 'O') {
+     6f8:	2a80011e 	bne	r5,r10,700 <checkReversiOver+0x60>
+                player2++;
+     6fc:	8c400044 	addi	r17,r17,1
+
+int checkReversiOver() {
+    int player1 = 0;
+    int player2 = 0;
+    for(int row = 0; row < gameCapacity; row++) {
+        for(int column = 0; column < gameCapacity; column++){
+     700:	10800044 	addi	r2,r2,1
+     704:	003ff506 	br	6dc <__alt_data_end+0xfffe803c>
+}
+
+int checkReversiOver() {
+    int player1 = 0;
+    int player2 = 0;
+    for(int row = 0; row < gameCapacity; row++) {
+     708:	18c00044 	addi	r3,r3,1
+     70c:	003ff006 	br	6d0 <__alt_data_end+0xfffe8030>
+            if(ticBoard[row][column] == 'O') {
+                player2++;
+            }
+        }
+    }
+    if(totalValidMoves == 0) {
+     710:	d0a06517 	ldw	r2,-32364(gp)
+     714:	10000b1e 	bne	r2,zero,744 <checkReversiOver+0xa4>
+        reversiOver = 1;
+     718:	04000044 	movi	r16,1
+     71c:	d4206b15 	stw	r16,-32340(gp)
+        if(player1 > player2) {
+     720:	8900030e 	bge	r17,r4,730 <checkReversiOver+0x90>
+            printf("player 1 wins");
+     724:	01000034 	movhi	r4,0
+     728:	2107dc04 	addi	r4,r4,8048
+     72c:	00000206 	br	738 <checkReversiOver+0x98>
+        } else {
+            printf("player 2 wins");
+     730:	01000034 	movhi	r4,0
+     734:	2107e004 	addi	r4,r4,8064
+     738:	00010c00 	call	10c0 <printf>
+        }
+        return 1;
+     73c:	8005883a 	mov	r2,r16
+     740:	00000d06 	br	778 <checkReversiOver+0xd8>
+    } else {
+    	char helper1[20];
+    	char helper2[20];
+    	itoa(player1, helper1, 10);
+     744:	01800284 	movi	r6,10
+     748:	d9400504 	addi	r5,sp,20
+     74c:	00010800 	call	1080 <itoa>
+    	itoa(player2, helper2, 10);
+     750:	01800284 	movi	r6,10
+     754:	d80b883a 	mov	r5,sp
+     758:	8809883a 	mov	r4,r17
+     75c:	00010800 	call	1080 <itoa>
+        alt_printf("current score: player1 %s    player2 %s\n", helper1, helper2);
+     760:	01000034 	movhi	r4,0
+     764:	d80d883a 	mov	r6,sp
+     768:	d9400504 	addi	r5,sp,20
+     76c:	2107e404 	addi	r4,r4,8080
+     770:	0001a640 	call	1a64 <alt_printf>
+        return 0;
+     774:	0005883a 	mov	r2,zero
+    }
+}
+     778:	dfc00c17 	ldw	ra,48(sp)
+     77c:	dc400b17 	ldw	r17,44(sp)
+     780:	dc000a17 	ldw	r16,40(sp)
+     784:	dec00d04 	addi	sp,sp,52
+     788:	f800283a 	ret
+
+0000078c <ticInit>:
+#include "linker.h"
+
+// fill the board with indexes
+void ticInit()
+{
+    currentPlayer = 1;
+     78c:	00800044 	movi	r2,1
+     790:	d0a06c15 	stw	r2,-32336(gp)
+    who = 'X';
+    other = 'O';
+    int current = 0;
+    for(int i = 0; i < gameCapacity; i++)
+     794:	d1606417 	ldw	r5,-32368(gp)
+
+// fill the board with indexes
+void ticInit()
+{
+    currentPlayer = 1;
+    who = 'X';
+     798:	00801604 	movi	r2,88
+     79c:	d0a06305 	stb	r2,-32372(gp)
+    int current = 0;
+    for(int i = 0; i < gameCapacity; i++)
+    {
+        for (int j = 0; j < gameCapacity; j++)
+        {
+            ticBoard[i][j] = current;
+     7a0:	02000034 	movhi	r8,0
+// fill the board with indexes
+void ticInit()
+{
+    currentPlayer = 1;
+    who = 'X';
+    other = 'O';
+     7a4:	008013c4 	movi	r2,79
+     7a8:	d0a06805 	stb	r2,-32352(gp)
+    int current = 0;
+    for(int i = 0; i < gameCapacity; i++)
+     7ac:	0009883a 	mov	r4,zero
+void ticInit()
+{
+    currentPlayer = 1;
+    who = 'X';
+    other = 'O';
+    int current = 0;
+     7b0:	0007883a 	mov	r3,zero
+    for(int i = 0; i < gameCapacity; i++)
+    {
+        for (int j = 0; j < gameCapacity; j++)
+        {
+            ticBoard[i][j] = current;
+     7b4:	4208e604 	addi	r8,r8,9112
+{
+    currentPlayer = 1;
+    who = 'X';
+    other = 'O';
+    int current = 0;
+    for(int i = 0; i < gameCapacity; i++)
+     7b8:	2140100e 	bge	r4,r5,7fc <ticInit+0x70>
+     7bc:	200c90fa 	slli	r6,r4,3
+     7c0:	1805883a 	mov	r2,r3
+     7c4:	30cdc83a 	sub	r6,r6,r3
+    {
+        for (int j = 0; j < gameCapacity; j++)
+     7c8:	10cfc83a 	sub	r7,r2,r3
+     7cc:	3940050e 	bge	r7,r5,7e4 <ticInit+0x58>
+        {
+            ticBoard[i][j] = current;
+     7d0:	118f883a 	add	r7,r2,r6
+     7d4:	3a0f883a 	add	r7,r7,r8
+     7d8:	38800005 	stb	r2,0(r7)
+            current++;
+     7dc:	10800044 	addi	r2,r2,1
+     7e0:	003ff906 	br	7c8 <__alt_data_end+0xfffe8128>
+     7e4:	2805883a 	mov	r2,r5
+     7e8:	2800010e 	bge	r5,zero,7f0 <ticInit+0x64>
+     7ec:	0005883a 	mov	r2,zero
+     7f0:	1887883a 	add	r3,r3,r2
+{
+    currentPlayer = 1;
+    who = 'X';
+    other = 'O';
+    int current = 0;
+    for(int i = 0; i < gameCapacity; i++)
+     7f4:	21000044 	addi	r4,r4,1
+     7f8:	003fef06 	br	7b8 <__alt_data_end+0xfffe8118>
+     7fc:	f800283a 	ret
+
+00000800 <drawTicBoard>:
+}
+
+// draw the layout of the board
+void drawTicBoard()
+{
+    alt_printf("Player 1 (X)  -  Player 2 (O)\n\n\n");
+     800:	01000034 	movhi	r4,0
+    return;
+}
+
+// draw the layout of the board
+void drawTicBoard()
+{
+     804:	defffb04 	addi	sp,sp,-20
+    alt_printf("Player 1 (X)  -  Player 2 (O)\n\n\n");
+     808:	2107ef04 	addi	r4,r4,8124
+    return;
+}
+
+// draw the layout of the board
+void drawTicBoard()
+{
+     80c:	dc000015 	stw	r16,0(sp)
+     810:	dfc00415 	stw	ra,16(sp)
+     814:	dcc00315 	stw	r19,12(sp)
+     818:	dc800215 	stw	r18,8(sp)
+     81c:	dc400115 	stw	r17,4(sp)
+    alt_printf("Player 1 (X)  -  Player 2 (O)\n\n\n");
+    for(int i = 0; i < gameCapacity; i++) {
+     820:	0021883a 	mov	r16,zero
+}
+
+// draw the layout of the board
+void drawTicBoard()
+{
+    alt_printf("Player 1 (X)  -  Player 2 (O)\n\n\n");
+     824:	0001a640 	call	1a64 <alt_printf>
+    for(int i = 0; i < gameCapacity; i++) {
+     828:	d0a06417 	ldw	r2,-32368(gp)
+     82c:	8080050e 	bge	r16,r2,844 <drawTicBoard+0x44>
+        alt_printf(" _____");
+     830:	01000034 	movhi	r4,0
+     834:	2107f804 	addi	r4,r4,8160
+     838:	0001a640 	call	1a64 <alt_printf>
+
+// draw the layout of the board
+void drawTicBoard()
+{
+    alt_printf("Player 1 (X)  -  Player 2 (O)\n\n\n");
+    for(int i = 0; i < gameCapacity; i++) {
+     83c:	84000044 	addi	r16,r16,1
+     840:	003ff906 	br	828 <__alt_data_end+0xfffe8188>
+        alt_printf(" _____");
+    }
+    alt_printf("\n");
+     844:	01000034 	movhi	r4,0
+     848:	2107aa04 	addi	r4,r4,7848
+    for(int i = 0; i < gameCapacity; i++) {
+        alt_printf("|");
+        for(int j = 0; j < gameCapacity; j++) {
+            if(ticBoard[i][j] <=9) {
+     84c:	04800034 	movhi	r18,0
+{
+    alt_printf("Player 1 (X)  -  Player 2 (O)\n\n\n");
+    for(int i = 0; i < gameCapacity; i++) {
+        alt_printf(" _____");
+    }
+    alt_printf("\n");
+     850:	0001a640 	call	1a64 <alt_printf>
+    for(int i = 0; i < gameCapacity; i++) {
+     854:	0021883a 	mov	r16,zero
+        alt_printf("|");
+        for(int j = 0; j < gameCapacity; j++) {
+            if(ticBoard[i][j] <=9) {
+     858:	9488e604 	addi	r18,r18,9112
+    alt_printf("Player 1 (X)  -  Player 2 (O)\n\n\n");
+    for(int i = 0; i < gameCapacity; i++) {
+        alt_printf(" _____");
+    }
+    alt_printf("\n");
+    for(int i = 0; i < gameCapacity; i++) {
+     85c:	d0a06417 	ldw	r2,-32368(gp)
+     860:	8080390e 	bge	r16,r2,948 <drawTicBoard+0x148>
+        alt_printf("|");
+     864:	01000034 	movhi	r4,0
+     868:	802690fa 	slli	r19,r16,3
+     86c:	2107fa04 	addi	r4,r4,8168
+     870:	0001a640 	call	1a64 <alt_printf>
+        for(int j = 0; j < gameCapacity; j++) {
+     874:	0023883a 	mov	r17,zero
+     878:	d0a06417 	ldw	r2,-32368(gp)
+     87c:	88801f0e 	bge	r17,r2,8fc <drawTicBoard+0xfc>
+            if(ticBoard[i][j] <=9) {
+     880:	8cc5883a 	add	r2,r17,r19
+     884:	1485883a 	add	r2,r2,r18
+     888:	11000003 	ldbu	r4,0(r2)
+     88c:	00800244 	movi	r2,9
+     890:	11000936 	bltu	r2,r4,8b8 <drawTicBoard+0xb8>
+            	itoa(ticBoard[i][j], buffer, 10);
+     894:	01400034 	movhi	r5,0
+     898:	2948f604 	addi	r5,r5,9176
+     89c:	01800284 	movi	r6,10
+     8a0:	00010800 	call	1080 <itoa>
+            	alt_printf("  %s  |", buffer);
+     8a4:	01400034 	movhi	r5,0
+     8a8:	01000034 	movhi	r4,0
+     8ac:	2948f604 	addi	r5,r5,9176
+     8b0:	2107fb04 	addi	r4,r4,8172
+     8b4:	00000e06 	br	8f0 <drawTicBoard+0xf0>
+            } else {
+                if(ticBoard[i][j] <= 63) {
+     8b8:	00800fc4 	movi	r2,63
+     8bc:	11000936 	bltu	r2,r4,8e4 <drawTicBoard+0xe4>
+                	itoa(ticBoard[i][j], buffer, 10);
+     8c0:	01400034 	movhi	r5,0
+     8c4:	2948f604 	addi	r5,r5,9176
+     8c8:	01800284 	movi	r6,10
+     8cc:	00010800 	call	1080 <itoa>
+                    alt_printf("  %s |", buffer);
+     8d0:	01400034 	movhi	r5,0
+     8d4:	01000034 	movhi	r4,0
+     8d8:	2948f604 	addi	r5,r5,9176
+     8dc:	2107fd04 	addi	r4,r4,8180
+     8e0:	00000306 	br	8f0 <drawTicBoard+0xf0>
+                } else {
+                    alt_printf("  %c  |", ticBoard[i][j]);
+     8e4:	200b883a 	mov	r5,r4
+     8e8:	01000034 	movhi	r4,0
+     8ec:	2107ff04 	addi	r4,r4,8188
+     8f0:	0001a640 	call	1a64 <alt_printf>
+        alt_printf(" _____");
+    }
+    alt_printf("\n");
+    for(int i = 0; i < gameCapacity; i++) {
+        alt_printf("|");
+        for(int j = 0; j < gameCapacity; j++) {
+     8f4:	8c400044 	addi	r17,r17,1
+     8f8:	003fdf06 	br	878 <__alt_data_end+0xfffe81d8>
+                } else {
+                    alt_printf("  %c  |", ticBoard[i][j]);
+                }
+            }
+        }
+        alt_printf("\n");
+     8fc:	01000034 	movhi	r4,0
+     900:	2107aa04 	addi	r4,r4,7848
+     904:	0001a640 	call	1a64 <alt_printf>
+        alt_printf("|");
+     908:	01000034 	movhi	r4,0
+     90c:	2107fa04 	addi	r4,r4,8168
+     910:	0001a640 	call	1a64 <alt_printf>
+        for(int k = 0; k < gameCapacity; k++) {
+     914:	0023883a 	mov	r17,zero
+     918:	d0a06417 	ldw	r2,-32368(gp)
+     91c:	8880050e 	bge	r17,r2,934 <drawTicBoard+0x134>
+            alt_printf("_____|");
+     920:	01000034 	movhi	r4,0
+     924:	21080104 	addi	r4,r4,8196
+     928:	0001a640 	call	1a64 <alt_printf>
+                }
+            }
+        }
+        alt_printf("\n");
+        alt_printf("|");
+        for(int k = 0; k < gameCapacity; k++) {
+     92c:	8c400044 	addi	r17,r17,1
+     930:	003ff906 	br	918 <__alt_data_end+0xfffe8278>
+            alt_printf("_____|");
+        }
+        alt_printf("\n");
+     934:	01000034 	movhi	r4,0
+     938:	2107aa04 	addi	r4,r4,7848
+     93c:	0001a640 	call	1a64 <alt_printf>
+    alt_printf("Player 1 (X)  -  Player 2 (O)\n\n\n");
+    for(int i = 0; i < gameCapacity; i++) {
+        alt_printf(" _____");
+    }
+    alt_printf("\n");
+    for(int i = 0; i < gameCapacity; i++) {
+     940:	84000044 	addi	r16,r16,1
+     944:	003fc506 	br	85c <__alt_data_end+0xfffe81bc>
+            alt_printf("_____|");
+        }
+        alt_printf("\n");
+    }
+    return;
+}
+     948:	dfc00417 	ldw	ra,16(sp)
+     94c:	dcc00317 	ldw	r19,12(sp)
+     950:	dc800217 	ldw	r18,8(sp)
+     954:	dc400117 	ldw	r17,4(sp)
+     958:	dc000017 	ldw	r16,0(sp)
+     95c:	dec00504 	addi	sp,sp,20
+     960:	f800283a 	ret
+
+00000964 <changeTicPlayer>:
+
+void changeTicPlayer()
+{
+	if(currentPlayer == 1)
+     964:	d1606c17 	ldw	r5,-32336(gp)
+     968:	01000044 	movi	r4,1
+     96c:	008013c4 	movi	r2,79
+     970:	00c01604 	movi	r3,88
+     974:	2900051e 	bne	r5,r4,98c <changeTicPlayer+0x28>
+	{
+		currentPlayer = 2;
+     978:	01000084 	movi	r4,2
+     97c:	d1206c15 	stw	r4,-32336(gp)
+		who = 'O';
+     980:	d0a06305 	stb	r2,-32372(gp)
+		other = 'X';
+     984:	d0e06805 	stb	r3,-32352(gp)
+     988:	f800283a 	ret
+
+	}
+	else
+	{
+		currentPlayer = 1;
+     98c:	d1206c15 	stw	r4,-32336(gp)
+		who = 'X';
+     990:	d0e06305 	stb	r3,-32372(gp)
+		other = 'O';
+     994:	d0a06805 	stb	r2,-32352(gp)
+     998:	f800283a 	ret
+
+0000099c <ticCheckWin>:
+    if(gameChoice == 3) flipBoard(x, y);
+    return;
+}
+
+int ticCheckWin(int player, int winNumber)
+{
+     99c:	defff504 	addi	sp,sp,-44
+     9a0:	dc800315 	stw	r18,12(sp)
+    for(int i = 0; i < gameCapacity ; i++)
+    {
+        int countH = 0;
+        for(int j = 0; j < gameCapacity; j++)
+        {
+            if(ticBoard[i][j] == who)
+     9a4:	d4a06303 	ldbu	r18,-32372(gp)
+    if(gameChoice == 3) flipBoard(x, y);
+    return;
+}
+
+int ticCheckWin(int player, int winNumber)
+{
+     9a8:	dc000115 	stw	r16,4(sp)
+    // check player horizontal
+    for(int i = 0; i < gameCapacity ; i++)
+     9ac:	d4206417 	ldw	r16,-32368(gp)
+    {
+        int countH = 0;
+        for(int j = 0; j < gameCapacity; j++)
+        {
+            if(ticBoard[i][j] == who)
+     9b0:	02000034 	movhi	r8,0
+    if(gameChoice == 3) flipBoard(x, y);
+    return;
+}
+
+int ticCheckWin(int player, int winNumber)
+{
+     9b4:	dfc00a15 	stw	ra,40(sp)
+     9b8:	df000915 	stw	fp,36(sp)
+     9bc:	ddc00815 	stw	r23,32(sp)
+     9c0:	dd800715 	stw	r22,28(sp)
+     9c4:	dd400615 	stw	r21,24(sp)
+     9c8:	dd000515 	stw	r20,20(sp)
+     9cc:	dcc00415 	stw	r19,16(sp)
+     9d0:	dc400215 	stw	r17,8(sp)
+    // check player horizontal
+    for(int i = 0; i < gameCapacity ; i++)
+     9d4:	0007883a 	mov	r3,zero
+    {
+        int countH = 0;
+        for(int j = 0; j < gameCapacity; j++)
+        {
+            if(ticBoard[i][j] == who)
+     9d8:	4208e604 	addi	r8,r8,9112
+     9dc:	92403fcc 	andi	r9,r18,255
+}
+
+int ticCheckWin(int player, int winNumber)
+{
+    // check player horizontal
+    for(int i = 0; i < gameCapacity ; i++)
+     9e0:	1c000e0e 	bge	r3,r16,a1c <ticCheckWin+0x80>
+     9e4:	180e90fa 	slli	r7,r3,3
+     9e8:	0005883a 	mov	r2,zero
+     9ec:	0009883a 	mov	r4,zero
+    {
+        int countH = 0;
+        for(int j = 0; j < gameCapacity; j++)
+     9f0:	1400070e 	bge	r2,r16,a10 <ticCheckWin+0x74>
+        {
+            if(ticBoard[i][j] == who)
+     9f4:	11cd883a 	add	r6,r2,r7
+     9f8:	320d883a 	add	r6,r6,r8
+     9fc:	31800003 	ldbu	r6,0(r6)
+     a00:	3240011e 	bne	r6,r9,a08 <ticCheckWin+0x6c>
+            {
+                countH++;
+     a04:	21000044 	addi	r4,r4,1
+{
+    // check player horizontal
+    for(int i = 0; i < gameCapacity ; i++)
+    {
+        int countH = 0;
+        for(int j = 0; j < gameCapacity; j++)
+     a08:	10800044 	addi	r2,r2,1
+     a0c:	003ff806 	br	9f0 <__alt_data_end+0xfffe8350>
+            if(ticBoard[i][j] == who)
+            {
+                countH++;
+            }
+        }
+        if(countH == winNumber)
+     a10:	21404e26 	beq	r4,r5,b4c <ticCheckWin+0x1b0>
+}
+
+int ticCheckWin(int player, int winNumber)
+{
+    // check player horizontal
+    for(int i = 0; i < gameCapacity ; i++)
+     a14:	18c00044 	addi	r3,r3,1
+     a18:	003ff106 	br	9e0 <__alt_data_end+0xfffe8340>
+    for(int j = 0; j < gameCapacity ; j++)
+    {
+        int countV = 0;
+        for(int i = 0; i < gameCapacity; i++)
+        {
+            if(ticBoard[i][j] == who)
+     a1c:	01c00034 	movhi	r7,0
+     a20:	0009883a 	mov	r4,zero
+     a24:	39c8e604 	addi	r7,r7,9112
+     a28:	92003fcc 	andi	r8,r18,255
+            return 1;
+        }
+    }
+
+    // check player 1 vertical
+    for(int j = 0; j < gameCapacity ; j++)
+     a2c:	24000e0e 	bge	r4,r16,a68 <ticCheckWin+0xcc>
+     a30:	0007883a 	mov	r3,zero
+     a34:	000d883a 	mov	r6,zero
+    {
+        int countV = 0;
+        for(int i = 0; i < gameCapacity; i++)
+     a38:	1c00080e 	bge	r3,r16,a5c <ticCheckWin+0xc0>
+        {
+            if(ticBoard[i][j] == who)
+     a3c:	180490fa 	slli	r2,r3,3
+     a40:	1105883a 	add	r2,r2,r4
+     a44:	11c5883a 	add	r2,r2,r7
+     a48:	10800003 	ldbu	r2,0(r2)
+     a4c:	4080011e 	bne	r8,r2,a54 <ticCheckWin+0xb8>
+            {
+                countV++;
+     a50:	31800044 	addi	r6,r6,1
+
+    // check player 1 vertical
+    for(int j = 0; j < gameCapacity ; j++)
+    {
+        int countV = 0;
+        for(int i = 0; i < gameCapacity; i++)
+     a54:	18c00044 	addi	r3,r3,1
+     a58:	003ff706 	br	a38 <__alt_data_end+0xfffe8398>
+            if(ticBoard[i][j] == who)
+            {
+                countV++;
+            }
+        }
+        if(countV == winNumber)
+     a5c:	31403b26 	beq	r6,r5,b4c <ticCheckWin+0x1b0>
+            return 1;
+        }
+    }
+
+    // check player 1 vertical
+    for(int j = 0; j < gameCapacity ; j++)
+     a60:	21000044 	addi	r4,r4,1
+     a64:	003ff106 	br	a2c <__alt_data_end+0xfffe838c>
+    for(int j = 0; j < gameCapacity; j++) {
+        for(int i = 0; i < gameCapacity; i++)
+        {
+            int match = 0;
+            for(int count = 0; count < winNumber; count++) {
+                if(ticBoard[i + count][j + count] == who) {
+     a68:	07000034 	movhi	fp,0
+     a6c:	2823883a 	mov	r17,r5
+     a70:	0029883a 	mov	r20,zero
+     a74:	e708e604 	addi	fp,fp,9112
+     a78:	90c03fcc 	andi	r3,r18,255
+        {
+            return 1;
+        }
+    }
+// top left to bottom right
+    for(int j = 0; j < gameCapacity; j++) {
+     a7c:	a400180e 	bge	r20,r16,ae0 <ticCheckWin+0x144>
+     a80:	0027883a 	mov	r19,zero
+        for(int i = 0; i < gameCapacity; i++)
+     a84:	9c00140e 	bge	r19,r16,ad8 <ticCheckWin+0x13c>
+     a88:	982e90fa 	slli	r23,r19,3
+     a8c:	002b883a 	mov	r21,zero
+     a90:	002d883a 	mov	r22,zero
+     a94:	bd2f883a 	add	r23,r23,r20
+        {
+            int match = 0;
+            for(int count = 0; count < winNumber; count++) {
+     a98:	ac400c0e 	bge	r21,r17,acc <ticCheckWin+0x130>
+                if(ticBoard[i + count][j + count] == who) {
+     a9c:	01400244 	movi	r5,9
+     aa0:	a809883a 	mov	r4,r21
+     aa4:	d8c00015 	stw	r3,0(sp)
+     aa8:	0000ff00 	call	ff0 <__mulsi3>
+     aac:	15c5883a 	add	r2,r2,r23
+     ab0:	1705883a 	add	r2,r2,fp
+     ab4:	10800003 	ldbu	r2,0(r2)
+     ab8:	d8c00017 	ldw	r3,0(sp)
+     abc:	1880011e 	bne	r3,r2,ac4 <ticCheckWin+0x128>
+                    match++;
+     ac0:	b5800044 	addi	r22,r22,1
+// top left to bottom right
+    for(int j = 0; j < gameCapacity; j++) {
+        for(int i = 0; i < gameCapacity; i++)
+        {
+            int match = 0;
+            for(int count = 0; count < winNumber; count++) {
+     ac4:	ad400044 	addi	r21,r21,1
+     ac8:	003ff306 	br	a98 <__alt_data_end+0xfffe83f8>
+                if(ticBoard[i + count][j + count] == who) {
+                    match++;
+                }
+            }
+            if(match == winNumber) return 1;
+     acc:	b4401f26 	beq	r22,r17,b4c <ticCheckWin+0x1b0>
+            return 1;
+        }
+    }
+// top left to bottom right
+    for(int j = 0; j < gameCapacity; j++) {
+        for(int i = 0; i < gameCapacity; i++)
+     ad0:	9cc00044 	addi	r19,r19,1
+     ad4:	003feb06 	br	a84 <__alt_data_end+0xfffe83e4>
+        {
+            return 1;
+        }
+    }
+// top left to bottom right
+    for(int j = 0; j < gameCapacity; j++) {
+     ad8:	a5000044 	addi	r20,r20,1
+     adc:	003fe706 	br	a7c <__alt_data_end+0xfffe83dc>
+    for(int j = gameCapacity - 1; j >= 0; j--) {
+        for(int i = 0; i < gameCapacity; i++)
+        {
+            int match = 0;
+            for(int count = 0; count < winNumber; count++) {
+                if(ticBoard[i + count][j - count] == who) {
+     ae0:	07000034 	movhi	fp,0
+            }
+            if(match == winNumber) return 1;
+        }
+    }
+    //top-right to bottom-left
+    for(int j = gameCapacity - 1; j >= 0; j--) {
+     ae4:	853fffc4 	addi	r20,r16,-1
+        for(int i = 0; i < gameCapacity; i++)
+        {
+            int match = 0;
+            for(int count = 0; count < winNumber; count++) {
+                if(ticBoard[i + count][j - count] == who) {
+     ae8:	e708e604 	addi	fp,fp,9112
+     aec:	94803fcc 	andi	r18,r18,255
+            }
+            if(match == winNumber) return 1;
+        }
+    }
+    //top-right to bottom-left
+    for(int j = gameCapacity - 1; j >= 0; j--) {
+     af0:	a0001816 	blt	r20,zero,b54 <ticCheckWin+0x1b8>
+     af4:	0027883a 	mov	r19,zero
+        for(int i = 0; i < gameCapacity; i++)
+     af8:	9c00120e 	bge	r19,r16,b44 <ticCheckWin+0x1a8>
+     afc:	982e90fa 	slli	r23,r19,3
+     b00:	002b883a 	mov	r21,zero
+     b04:	002d883a 	mov	r22,zero
+     b08:	bd2f883a 	add	r23,r23,r20
+        {
+            int match = 0;
+            for(int count = 0; count < winNumber; count++) {
+     b0c:	ac400a0e 	bge	r21,r17,b38 <ticCheckWin+0x19c>
+                if(ticBoard[i + count][j - count] == who) {
+     b10:	014001c4 	movi	r5,7
+     b14:	a809883a 	mov	r4,r21
+     b18:	0000ff00 	call	ff0 <__mulsi3>
+     b1c:	15c5883a 	add	r2,r2,r23
+     b20:	1705883a 	add	r2,r2,fp
+     b24:	10800003 	ldbu	r2,0(r2)
+     b28:	9080011e 	bne	r18,r2,b30 <ticCheckWin+0x194>
+                    match++;
+     b2c:	b5800044 	addi	r22,r22,1
+    //top-right to bottom-left
+    for(int j = gameCapacity - 1; j >= 0; j--) {
+        for(int i = 0; i < gameCapacity; i++)
+        {
+            int match = 0;
+            for(int count = 0; count < winNumber; count++) {
+     b30:	ad400044 	addi	r21,r21,1
+     b34:	003ff506 	br	b0c <__alt_data_end+0xfffe846c>
+                if(ticBoard[i + count][j - count] == who) {
+                    match++;
+                }
+            }
+            if(match == winNumber) return 1;
+     b38:	b4400426 	beq	r22,r17,b4c <ticCheckWin+0x1b0>
+            if(match == winNumber) return 1;
+        }
+    }
+    //top-right to bottom-left
+    for(int j = gameCapacity - 1; j >= 0; j--) {
+        for(int i = 0; i < gameCapacity; i++)
+     b3c:	9cc00044 	addi	r19,r19,1
+     b40:	003fed06 	br	af8 <__alt_data_end+0xfffe8458>
+            }
+            if(match == winNumber) return 1;
+        }
+    }
+    //top-right to bottom-left
+    for(int j = gameCapacity - 1; j >= 0; j--) {
+     b44:	a53fffc4 	addi	r20,r20,-1
+     b48:	003fe906 	br	af0 <__alt_data_end+0xfffe8450>
+                countH++;
+            }
+        }
+        if(countH == winNumber)
+        {
+            return 1;
+     b4c:	00800044 	movi	r2,1
+     b50:	00000106 	br	b58 <ticCheckWin+0x1bc>
+                }
+            }
+            if(match == winNumber) return 1;
+        }
+    }
+    return 0;
+     b54:	0005883a 	mov	r2,zero
+}
+     b58:	dfc00a17 	ldw	ra,40(sp)
+     b5c:	df000917 	ldw	fp,36(sp)
+     b60:	ddc00817 	ldw	r23,32(sp)
+     b64:	dd800717 	ldw	r22,28(sp)
+     b68:	dd400617 	ldw	r21,24(sp)
+     b6c:	dd000517 	ldw	r20,20(sp)
+     b70:	dcc00417 	ldw	r19,16(sp)
+     b74:	dc800317 	ldw	r18,12(sp)
+     b78:	dc400217 	ldw	r17,8(sp)
+     b7c:	dc000117 	ldw	r16,4(sp)
+     b80:	dec00b04 	addi	sp,sp,44
+     b84:	f800283a 	ret
+
+00000b88 <ticCheckOver>:
+
+int ticCheckOver() {
+    int counter = 0;
+    for (int i = 0; i < gameCapacity; i++) {
+     b88:	d1a06417 	ldw	r6,-32368(gp)
+        for(int j = 0; j < gameCapacity; j++) {
+            if(ticBoard[i][j] <= 64) {
+     b8c:	02000034 	movhi	r8,0
+    return 0;
+}
+
+int ticCheckOver() {
+    int counter = 0;
+    for (int i = 0; i < gameCapacity; i++) {
+     b90:	0009883a 	mov	r4,zero
+    }
+    return 0;
+}
+
+int ticCheckOver() {
+    int counter = 0;
+     b94:	0005883a 	mov	r2,zero
+    for (int i = 0; i < gameCapacity; i++) {
+        for(int j = 0; j < gameCapacity; j++) {
+            if(ticBoard[i][j] <= 64) {
+     b98:	4208e604 	addi	r8,r8,9112
+     b9c:	02401004 	movi	r9,64
+    return 0;
+}
+
+int ticCheckOver() {
+    int counter = 0;
+    for (int i = 0; i < gameCapacity; i++) {
+     ba0:	21800c0e 	bge	r4,r6,bd4 <ticCheckOver+0x4c>
+     ba4:	200e90fa 	slli	r7,r4,3
+     ba8:	0007883a 	mov	r3,zero
+        for(int j = 0; j < gameCapacity; j++) {
+     bac:	1980070e 	bge	r3,r6,bcc <ticCheckOver+0x44>
+            if(ticBoard[i][j] <= 64) {
+     bb0:	19cb883a 	add	r5,r3,r7
+     bb4:	2a0b883a 	add	r5,r5,r8
+     bb8:	29400003 	ldbu	r5,0(r5)
+     bbc:	49400136 	bltu	r9,r5,bc4 <ticCheckOver+0x3c>
+                counter++;
+     bc0:	10800044 	addi	r2,r2,1
+}
+
+int ticCheckOver() {
+    int counter = 0;
+    for (int i = 0; i < gameCapacity; i++) {
+        for(int j = 0; j < gameCapacity; j++) {
+     bc4:	18c00044 	addi	r3,r3,1
+     bc8:	003ff806 	br	bac <__alt_data_end+0xfffe850c>
+    return 0;
+}
+
+int ticCheckOver() {
+    int counter = 0;
+    for (int i = 0; i < gameCapacity; i++) {
+     bcc:	21000044 	addi	r4,r4,1
+     bd0:	003ff306 	br	ba0 <__alt_data_end+0xfffe8500>
+    }
+    if(counter == 0) {
+        return 1;
+    }
+    return 0;
+}
+     bd4:	1005003a 	cmpeq	r2,r2,zero
+     bd8:	f800283a 	ret
+
+00000bdc <stupid>:
+
+char stupid() {
+     bdc:	defffd04 	addi	sp,sp,-12
+     be0:	dfc00215 	stw	ra,8(sp)
+     be4:	dc400115 	stw	r17,4(sp)
+     be8:	dc000015 	stw	r16,0(sp)
+    char c1 = alt_getchar();
+     bec:	00019140 	call	1914 <alt_getchar>
+     bf0:	1023883a 	mov	r17,r2
+    alt_getchar();
+     bf4:	00019140 	call	1914 <alt_getchar>
+    char c2 = alt_getchar();
+     bf8:	00019140 	call	1914 <alt_getchar>
+     bfc:	1021883a 	mov	r16,r2
+    alt_getchar();
+     c00:	00019140 	call	1914 <alt_getchar>
+    int big = c1 - '0';
+    int small = c2 - '0';
+    char value = (char)(big * 10 + small);
+    return value + '0';
+     c04:	89003fcc 	andi	r4,r17,255
+     c08:	2100201c 	xori	r4,r4,128
+     c0c:	213fe004 	addi	r4,r4,-128
+     c10:	84003fcc 	andi	r16,r16,255
+     c14:	01400284 	movi	r5,10
+     c18:	213ff404 	addi	r4,r4,-48
+     c1c:	8400201c 	xori	r16,r16,128
+     c20:	0000ff00 	call	ff0 <__mulsi3>
+     c24:	843fe004 	addi	r16,r16,-128
+
+}
+     c28:	1405883a 	add	r2,r2,r16
+     c2c:	dfc00217 	ldw	ra,8(sp)
+     c30:	dc400117 	ldw	r17,4(sp)
+     c34:	dc000017 	ldw	r16,0(sp)
+     c38:	dec00304 	addi	sp,sp,12
+     c3c:	f800283a 	ret
+
+00000c40 <receive>:
+
+
+int receive() {
+	char result = '0';
+	while((*(charRec) & 0x1) != 0x1) {}
+     c40:	00c000b4 	movhi	r3,2
+     c44:	18c40004 	addi	r3,r3,4096
+     c48:	18800003 	ldbu	r2,0(r3)
+     c4c:	1080004c 	andi	r2,r2,1
+     c50:	103ffd26 	beq	r2,zero,c48 <__alt_data_end+0xfffe85a8>
+	result = *(PLAYERIN);
+     c54:	008000b4 	movhi	r2,2
+     c58:	10841404 	addi	r2,r2,4176
+     c5c:	10800003 	ldbu	r2,0(r2)
+	//itoa(result, buffer, 10);
+	//alt_printf("received grid is %s\n", buffer);
+	int value = result - '0';
+	return value;
+     c60:	10803fcc 	andi	r2,r2,255
+     c64:	1080201c 	xori	r2,r2,128
+     c68:	10bfe004 	addi	r2,r2,-128
+}
+     c6c:	10bff404 	addi	r2,r2,-48
+     c70:	f800283a 	ret
+
+00000c74 <send>:
+
+int send() {
+	alt_putstr("Which grid do you want to choose? \n");
+     c74:	01000034 	movhi	r4,0
+	//alt_printf("received grid is %s\n", buffer);
+	int value = result - '0';
+	return value;
+}
+
+int send() {
+     c78:	defffb04 	addi	sp,sp,-20
+	alt_putstr("Which grid do you want to choose? \n");
+     c7c:	21080304 	addi	r4,r4,8204
+	//alt_printf("received grid is %s\n", buffer);
+	int value = result - '0';
+	return value;
+}
+
+int send() {
+     c80:	dfc00415 	stw	ra,16(sp)
+     c84:	dcc00315 	stw	r19,12(sp)
+     c88:	dc800215 	stw	r18,8(sp)
+     c8c:	dc400115 	stw	r17,4(sp)
+     c90:	dc000015 	stw	r16,0(sp)
+	alt_putstr("Which grid do you want to choose? \n");
+     c94:	0001c1c0 	call	1c1c <alt_putstr>
+    alt_putstr("Now please enter the grid \n");
+     c98:	01000034 	movhi	r4,0
+     c9c:	21080c04 	addi	r4,r4,8240
+     ca0:	0001c1c0 	call	1c1c <alt_putstr>
+	char result = stupid();
+     ca4:	0000bdc0 	call	bdc <stupid>
+     ca8:	1021883a 	mov	r16,r2
+	//itoa(result, buffer, 10);
+	*(PLAYEROUT) = result;
+     cac:	008000b4 	movhi	r2,2
+	//alt_printf("sending char %s\n",buffer);
+	*(transmit) = 0x1;
+     cb0:	048000b4 	movhi	r18,2
+int send() {
+	alt_putstr("Which grid do you want to choose? \n");
+    alt_putstr("Now please enter the grid \n");
+	char result = stupid();
+	//itoa(result, buffer, 10);
+	*(PLAYEROUT) = result;
+     cb4:	10841004 	addi	r2,r2,4160
+     cb8:	14000005 	stb	r16,0(r2)
+	//alt_printf("sending char %s\n",buffer);
+	*(transmit) = 0x1;
+     cbc:	94840804 	addi	r18,r18,4128
+     cc0:	04c00044 	movi	r19,1
+	usleep(1000);
+	*(load) = 0x1;
+     cc4:	044000b4 	movhi	r17,2
+    alt_putstr("Now please enter the grid \n");
+	char result = stupid();
+	//itoa(result, buffer, 10);
+	*(PLAYEROUT) = result;
+	//alt_printf("sending char %s\n",buffer);
+	*(transmit) = 0x1;
+     cc8:	94c00005 	stb	r19,0(r18)
+	usleep(1000);
+     ccc:	0100fa04 	movi	r4,1000
+     cd0:	0001c540 	call	1c54 <usleep>
+	*(load) = 0x1;
+     cd4:	8c440c04 	addi	r17,r17,4144
+     cd8:	8cc00005 	stb	r19,0(r17)
+	while(!charRec){}
+	usleep(2000);
+     cdc:	0101f404 	movi	r4,2000
+     ce0:	0001c540 	call	1c54 <usleep>
+	*(transmit) = 0x0;
+	*(load) = 0x0;
+	int value = result - '0';
+	return value;
+     ce4:	80803fcc 	andi	r2,r16,255
+     ce8:	1080201c 	xori	r2,r2,128
+     cec:	10bfe004 	addi	r2,r2,-128
+	*(transmit) = 0x1;
+	usleep(1000);
+	*(load) = 0x1;
+	while(!charRec){}
+	usleep(2000);
+	*(transmit) = 0x0;
+     cf0:	90000005 	stb	zero,0(r18)
+	*(load) = 0x0;
+	int value = result - '0';
+	return value;
+}
+     cf4:	10bff404 	addi	r2,r2,-48
+	usleep(1000);
+	*(load) = 0x1;
+	while(!charRec){}
+	usleep(2000);
+	*(transmit) = 0x0;
+	*(load) = 0x0;
+     cf8:	88000005 	stb	zero,0(r17)
+	int value = result - '0';
+	return value;
+}
+     cfc:	dfc00417 	ldw	ra,16(sp)
+     d00:	dcc00317 	ldw	r19,12(sp)
+     d04:	dc800217 	ldw	r18,8(sp)
+     d08:	dc400117 	ldw	r17,4(sp)
+     d0c:	dc000017 	ldw	r16,0(sp)
+     d10:	dec00504 	addi	sp,sp,20
+     d14:	f800283a 	ret
+
+00000d18 <ticUpdate>:
+	return;
+
+}
+
+void ticUpdate(int player, int gameChoice)
+{
+     d18:	defff904 	addi	sp,sp,-28
+     d1c:	dd000415 	stw	r20,16(sp)
+     d20:	2829883a 	mov	r20,r5
+
+    alt_printf("player %c playing now\n", (currentPlayer + '0'));
+     d24:	d1606c17 	ldw	r5,-32336(gp)
+	return;
+
+}
+
+void ticUpdate(int player, int gameChoice)
+{
+     d28:	dcc00315 	stw	r19,12(sp)
+     d2c:	2027883a 	mov	r19,r4
+
+    alt_printf("player %c playing now\n", (currentPlayer + '0'));
+     d30:	01000034 	movhi	r4,0
+	return;
+
+}
+
+void ticUpdate(int player, int gameChoice)
+{
+     d34:	dd400515 	stw	r21,20(sp)
+
+    alt_printf("player %c playing now\n", (currentPlayer + '0'));
+     d38:	29400c04 	addi	r5,r5,48
+     d3c:	21081304 	addi	r4,r4,8268
+            inputValid = 1;
+        }
+        if(inputValid)
+        {
+            int maxNumber = gameCapacity * gameCapacity - 1;
+            if(ticBoard[x][y] >= 0 && ticBoard[x][y] <= maxNumber)
+     d40:	05400034 	movhi	r21,0
+	return;
+
+}
+
+void ticUpdate(int player, int gameChoice)
+{
+     d44:	dfc00615 	stw	ra,24(sp)
+     d48:	dc800215 	stw	r18,8(sp)
+     d4c:	dc400115 	stw	r17,4(sp)
+     d50:	dc000015 	stw	r16,0(sp)
+            inputValid = 1;
+        }
+        if(inputValid)
+        {
+            int maxNumber = gameCapacity * gameCapacity - 1;
+            if(ticBoard[x][y] >= 0 && ticBoard[x][y] <= maxNumber)
+     d54:	ad48e604 	addi	r21,r21,9112
+}
+
+void ticUpdate(int player, int gameChoice)
+{
+
+    alt_printf("player %c playing now\n", (currentPlayer + '0'));
+     d58:	0001a640 	call	1a64 <alt_printf>
+    int step;
+    int x, y;
+    while (!inputValid)
+    {
+    	// get the appropriate move
+    	if(player != me) {
+     d5c:	d0a06217 	ldw	r2,-32376(gp)
+     d60:	14c00226 	beq	r2,r19,d6c <ticUpdate+0x54>
+    		step = receive();
+     d64:	0000c400 	call	c40 <receive>
+     d68:	00000106 	br	d70 <ticUpdate+0x58>
+    	} else {
+    		step = send();
+     d6c:	0000c740 	call	c74 <send>
+     d70:	1023883a 	mov	r17,r2
+    	}
+    	// calculate which grid to  put
+        x = step / gameCapacity;
+        y = step % gameCapacity;
+        if(step < biggest && step >= 0 && x < gameCapacity && y < gameCapacity) {
+     d74:	d0a06a17 	ldw	r2,-32344(gp)
+     d78:	88bff80e 	bge	r17,r2,d5c <__alt_data_end+0xfffe86bc>
+     d7c:	883ff716 	blt	r17,zero,d5c <__alt_data_end+0xfffe86bc>
+    		step = receive();
+    	} else {
+    		step = send();
+    	}
+    	// calculate which grid to  put
+        x = step / gameCapacity;
+     d80:	d4206417 	ldw	r16,-32368(gp)
+     d84:	8809883a 	mov	r4,r17
+     d88:	800b883a 	mov	r5,r16
+     d8c:	0000e3c0 	call	e3c <__divsi3>
+     d90:	1025883a 	mov	r18,r2
+        y = step % gameCapacity;
+        if(step < biggest && step >= 0 && x < gameCapacity && y < gameCapacity) {
+     d94:	143ff10e 	bge	r2,r16,d5c <__alt_data_end+0xfffe86bc>
+    	} else {
+    		step = send();
+    	}
+    	// calculate which grid to  put
+        x = step / gameCapacity;
+        y = step % gameCapacity;
+     d98:	8809883a 	mov	r4,r17
+     d9c:	800b883a 	mov	r5,r16
+     da0:	0000ec00 	call	ec0 <__modsi3>
+     da4:	1023883a 	mov	r17,r2
+        if(step < biggest && step >= 0 && x < gameCapacity && y < gameCapacity) {
+     da8:	143fec0e 	bge	r2,r16,d5c <__alt_data_end+0xfffe86bc>
+            inputValid = 1;
+        }
+        if(inputValid)
+        {
+            int maxNumber = gameCapacity * gameCapacity - 1;
+            if(ticBoard[x][y] >= 0 && ticBoard[x][y] <= maxNumber)
+     dac:	8009883a 	mov	r4,r16
+     db0:	800b883a 	mov	r5,r16
+     db4:	0000ff00 	call	ff0 <__mulsi3>
+     db8:	900690fa 	slli	r3,r18,3
+     dbc:	a8c7883a 	add	r3,r21,r3
+     dc0:	1c47883a 	add	r3,r3,r17
+     dc4:	19000003 	ldbu	r4,0(r3)
+     dc8:	20bfe40e 	bge	r4,r2,d5c <__alt_data_end+0xfffe86bc>
+            {
+                inputValid = 1;
+                if(player == 1)
+     dcc:	00800044 	movi	r2,1
+     dd0:	9880021e 	bne	r19,r2,ddc <ticUpdate+0xc4>
+                {
+                    ticBoard[x][y] = 'X';
+     dd4:	00801604 	movi	r2,88
+     dd8:	00000106 	br	de0 <ticUpdate+0xc8>
+                }
+                else
+                {
+                    ticBoard[x][y] = 'O';
+     ddc:	008013c4 	movi	r2,79
+     de0:	18800005 	stb	r2,0(r3)
+            {
+                inputValid = 0;
+            }
+        }
+    }
+    if(gameChoice == 3) flipBoard(x, y);
+     de4:	008000c4 	movi	r2,3
+     de8:	a0800b1e 	bne	r20,r2,e18 <ticUpdate+0x100>
+     dec:	880b883a 	mov	r5,r17
+     df0:	9009883a 	mov	r4,r18
+    return;
+}
+     df4:	dfc00617 	ldw	ra,24(sp)
+     df8:	dd400517 	ldw	r21,20(sp)
+     dfc:	dd000417 	ldw	r20,16(sp)
+     e00:	dcc00317 	ldw	r19,12(sp)
+     e04:	dc800217 	ldw	r18,8(sp)
+     e08:	dc400117 	ldw	r17,4(sp)
+     e0c:	dc000017 	ldw	r16,0(sp)
+     e10:	dec00704 	addi	sp,sp,28
+            {
+                inputValid = 0;
+            }
+        }
+    }
+    if(gameChoice == 3) flipBoard(x, y);
+     e14:	00005c01 	jmpi	5c0 <flipBoard>
+    return;
+}
+     e18:	dfc00617 	ldw	ra,24(sp)
+     e1c:	dd400517 	ldw	r21,20(sp)
+     e20:	dd000417 	ldw	r20,16(sp)
+     e24:	dcc00317 	ldw	r19,12(sp)
+     e28:	dc800217 	ldw	r18,8(sp)
+     e2c:	dc400117 	ldw	r17,4(sp)
+     e30:	dc000017 	ldw	r16,0(sp)
+     e34:	dec00704 	addi	sp,sp,28
+     e38:	f800283a 	ret
+
+00000e3c <__divsi3>:
+     e3c:	20001b16 	blt	r4,zero,eac <__divsi3+0x70>
+     e40:	000f883a 	mov	r7,zero
+     e44:	28001616 	blt	r5,zero,ea0 <__divsi3+0x64>
+     e48:	200d883a 	mov	r6,r4
+     e4c:	29001a2e 	bgeu	r5,r4,eb8 <__divsi3+0x7c>
+     e50:	00800804 	movi	r2,32
+     e54:	00c00044 	movi	r3,1
+     e58:	00000106 	br	e60 <__divsi3+0x24>
+     e5c:	10000d26 	beq	r2,zero,e94 <__divsi3+0x58>
+     e60:	294b883a 	add	r5,r5,r5
+     e64:	10bfffc4 	addi	r2,r2,-1
+     e68:	18c7883a 	add	r3,r3,r3
+     e6c:	293ffb36 	bltu	r5,r4,e5c <__alt_data_end+0xfffe87bc>
+     e70:	0005883a 	mov	r2,zero
+     e74:	18000726 	beq	r3,zero,e94 <__divsi3+0x58>
+     e78:	0005883a 	mov	r2,zero
+     e7c:	31400236 	bltu	r6,r5,e88 <__divsi3+0x4c>
+     e80:	314dc83a 	sub	r6,r6,r5
+     e84:	10c4b03a 	or	r2,r2,r3
+     e88:	1806d07a 	srli	r3,r3,1
+     e8c:	280ad07a 	srli	r5,r5,1
+     e90:	183ffa1e 	bne	r3,zero,e7c <__alt_data_end+0xfffe87dc>
+     e94:	38000126 	beq	r7,zero,e9c <__divsi3+0x60>
+     e98:	0085c83a 	sub	r2,zero,r2
+     e9c:	f800283a 	ret
+     ea0:	014bc83a 	sub	r5,zero,r5
+     ea4:	39c0005c 	xori	r7,r7,1
+     ea8:	003fe706 	br	e48 <__alt_data_end+0xfffe87a8>
+     eac:	0109c83a 	sub	r4,zero,r4
+     eb0:	01c00044 	movi	r7,1
+     eb4:	003fe306 	br	e44 <__alt_data_end+0xfffe87a4>
+     eb8:	00c00044 	movi	r3,1
+     ebc:	003fee06 	br	e78 <__alt_data_end+0xfffe87d8>
+
+00000ec0 <__modsi3>:
+     ec0:	20001716 	blt	r4,zero,f20 <__modsi3+0x60>
+     ec4:	000f883a 	mov	r7,zero
+     ec8:	2005883a 	mov	r2,r4
+     ecc:	28001216 	blt	r5,zero,f18 <__modsi3+0x58>
+     ed0:	2900162e 	bgeu	r5,r4,f2c <__modsi3+0x6c>
+     ed4:	01800804 	movi	r6,32
+     ed8:	00c00044 	movi	r3,1
+     edc:	00000106 	br	ee4 <__modsi3+0x24>
+     ee0:	30000a26 	beq	r6,zero,f0c <__modsi3+0x4c>
+     ee4:	294b883a 	add	r5,r5,r5
+     ee8:	31bfffc4 	addi	r6,r6,-1
+     eec:	18c7883a 	add	r3,r3,r3
+     ef0:	293ffb36 	bltu	r5,r4,ee0 <__alt_data_end+0xfffe8840>
+     ef4:	18000526 	beq	r3,zero,f0c <__modsi3+0x4c>
+     ef8:	1806d07a 	srli	r3,r3,1
+     efc:	11400136 	bltu	r2,r5,f04 <__modsi3+0x44>
+     f00:	1145c83a 	sub	r2,r2,r5
+     f04:	280ad07a 	srli	r5,r5,1
+     f08:	183ffb1e 	bne	r3,zero,ef8 <__alt_data_end+0xfffe8858>
+     f0c:	38000126 	beq	r7,zero,f14 <__modsi3+0x54>
+     f10:	0085c83a 	sub	r2,zero,r2
+     f14:	f800283a 	ret
+     f18:	014bc83a 	sub	r5,zero,r5
+     f1c:	003fec06 	br	ed0 <__alt_data_end+0xfffe8830>
+     f20:	0109c83a 	sub	r4,zero,r4
+     f24:	01c00044 	movi	r7,1
+     f28:	003fe706 	br	ec8 <__alt_data_end+0xfffe8828>
+     f2c:	00c00044 	movi	r3,1
+     f30:	003ff106 	br	ef8 <__alt_data_end+0xfffe8858>
+
+00000f34 <__udivsi3>:
+     f34:	200d883a 	mov	r6,r4
+     f38:	2900152e 	bgeu	r5,r4,f90 <__udivsi3+0x5c>
+     f3c:	28001416 	blt	r5,zero,f90 <__udivsi3+0x5c>
+     f40:	00800804 	movi	r2,32
+     f44:	00c00044 	movi	r3,1
+     f48:	00000206 	br	f54 <__udivsi3+0x20>
+     f4c:	10000e26 	beq	r2,zero,f88 <__udivsi3+0x54>
+     f50:	28000516 	blt	r5,zero,f68 <__udivsi3+0x34>
+     f54:	294b883a 	add	r5,r5,r5
+     f58:	10bfffc4 	addi	r2,r2,-1
+     f5c:	18c7883a 	add	r3,r3,r3
+     f60:	293ffa36 	bltu	r5,r4,f4c <__alt_data_end+0xfffe88ac>
+     f64:	18000826 	beq	r3,zero,f88 <__udivsi3+0x54>
+     f68:	0005883a 	mov	r2,zero
+     f6c:	31400236 	bltu	r6,r5,f78 <__udivsi3+0x44>
+     f70:	314dc83a 	sub	r6,r6,r5
+     f74:	10c4b03a 	or	r2,r2,r3
+     f78:	1806d07a 	srli	r3,r3,1
+     f7c:	280ad07a 	srli	r5,r5,1
+     f80:	183ffa1e 	bne	r3,zero,f6c <__alt_data_end+0xfffe88cc>
+     f84:	f800283a 	ret
+     f88:	0005883a 	mov	r2,zero
+     f8c:	f800283a 	ret
+     f90:	00c00044 	movi	r3,1
+     f94:	003ff406 	br	f68 <__alt_data_end+0xfffe88c8>
+
+00000f98 <__umodsi3>:
+     f98:	2005883a 	mov	r2,r4
+     f9c:	2900122e 	bgeu	r5,r4,fe8 <__umodsi3+0x50>
+     fa0:	28001116 	blt	r5,zero,fe8 <__umodsi3+0x50>
+     fa4:	01800804 	movi	r6,32
+     fa8:	00c00044 	movi	r3,1
+     fac:	00000206 	br	fb8 <__umodsi3+0x20>
+     fb0:	30000c26 	beq	r6,zero,fe4 <__umodsi3+0x4c>
+     fb4:	28000516 	blt	r5,zero,fcc <__umodsi3+0x34>
+     fb8:	294b883a 	add	r5,r5,r5
+     fbc:	31bfffc4 	addi	r6,r6,-1
+     fc0:	18c7883a 	add	r3,r3,r3
+     fc4:	293ffa36 	bltu	r5,r4,fb0 <__alt_data_end+0xfffe8910>
+     fc8:	18000626 	beq	r3,zero,fe4 <__umodsi3+0x4c>
+     fcc:	1806d07a 	srli	r3,r3,1
+     fd0:	11400136 	bltu	r2,r5,fd8 <__umodsi3+0x40>
+     fd4:	1145c83a 	sub	r2,r2,r5
+     fd8:	280ad07a 	srli	r5,r5,1
+     fdc:	183ffb1e 	bne	r3,zero,fcc <__alt_data_end+0xfffe892c>
+     fe0:	f800283a 	ret
+     fe4:	f800283a 	ret
+     fe8:	00c00044 	movi	r3,1
+     fec:	003ff706 	br	fcc <__alt_data_end+0xfffe892c>
+
+00000ff0 <__mulsi3>:
+     ff0:	0005883a 	mov	r2,zero
+     ff4:	20000726 	beq	r4,zero,1014 <__mulsi3+0x24>
+     ff8:	20c0004c 	andi	r3,r4,1
+     ffc:	2008d07a 	srli	r4,r4,1
+    1000:	18000126 	beq	r3,zero,1008 <__mulsi3+0x18>
+    1004:	1145883a 	add	r2,r2,r5
+    1008:	294b883a 	add	r5,r5,r5
+    100c:	203ffa1e 	bne	r4,zero,ff8 <__alt_data_end+0xfffe8958>
+    1010:	f800283a 	ret
+    1014:	f800283a 	ret
+
+00001018 <__itoa>:
+    1018:	30bfff84 	addi	r2,r6,-2
+    101c:	00c00884 	movi	r3,34
+    1020:	1880032e 	bgeu	r3,r2,1030 <__itoa+0x18>
+    1024:	28000005 	stb	zero,0(r5)
+    1028:	0005883a 	mov	r2,zero
+    102c:	f800283a 	ret
+    1030:	defffe04 	addi	sp,sp,-8
+    1034:	dfc00115 	stw	ra,4(sp)
+    1038:	dc000015 	stw	r16,0(sp)
+    103c:	00800284 	movi	r2,10
+    1040:	3080061e 	bne	r6,r2,105c <__itoa+0x44>
+    1044:	2000050e 	bge	r4,zero,105c <__itoa+0x44>
+    1048:	00800b44 	movi	r2,45
+    104c:	28800005 	stb	r2,0(r5)
+    1050:	0109c83a 	sub	r4,zero,r4
+    1054:	00800044 	movi	r2,1
+    1058:	00000106 	br	1060 <__itoa+0x48>
+    105c:	0005883a 	mov	r2,zero
+    1060:	2821883a 	mov	r16,r5
+    1064:	288b883a 	add	r5,r5,r2
+    1068:	000110c0 	call	110c <__utoa>
+    106c:	8005883a 	mov	r2,r16
+    1070:	dfc00117 	ldw	ra,4(sp)
+    1074:	dc000017 	ldw	r16,0(sp)
+    1078:	dec00204 	addi	sp,sp,8
+    107c:	f800283a 	ret
+
+00001080 <itoa>:
+    1080:	00010181 	jmpi	1018 <__itoa>
+
+00001084 <_printf_r>:
+    1084:	defffd04 	addi	sp,sp,-12
+    1088:	dfc00015 	stw	ra,0(sp)
+    108c:	d9800115 	stw	r6,4(sp)
+    1090:	d9c00215 	stw	r7,8(sp)
+    1094:	20c00217 	ldw	r3,8(r4)
+    1098:	01800034 	movhi	r6,0
+    109c:	3185f004 	addi	r6,r6,6080
+    10a0:	19800115 	stw	r6,4(r3)
+    10a4:	280d883a 	mov	r6,r5
+    10a8:	21400217 	ldw	r5,8(r4)
+    10ac:	d9c00104 	addi	r7,sp,4
+    10b0:	00012780 	call	1278 <___vfprintf_internal_r>
+    10b4:	dfc00017 	ldw	ra,0(sp)
+    10b8:	dec00304 	addi	sp,sp,12
+    10bc:	f800283a 	ret
+
+000010c0 <printf>:
+    10c0:	defffc04 	addi	sp,sp,-16
+    10c4:	dfc00015 	stw	ra,0(sp)
+    10c8:	d9400115 	stw	r5,4(sp)
+    10cc:	d9800215 	stw	r6,8(sp)
+    10d0:	d9c00315 	stw	r7,12(sp)
+    10d4:	00800034 	movhi	r2,0
+    10d8:	10887504 	addi	r2,r2,8660
+    10dc:	10800017 	ldw	r2,0(r2)
+    10e0:	01400034 	movhi	r5,0
+    10e4:	2945f004 	addi	r5,r5,6080
+    10e8:	10c00217 	ldw	r3,8(r2)
+    10ec:	d9800104 	addi	r6,sp,4
+    10f0:	19400115 	stw	r5,4(r3)
+    10f4:	200b883a 	mov	r5,r4
+    10f8:	11000217 	ldw	r4,8(r2)
+    10fc:	00017a40 	call	17a4 <__vfprintf_internal>
+    1100:	dfc00017 	ldw	ra,0(sp)
+    1104:	dec00404 	addi	sp,sp,16
+    1108:	f800283a 	ret
+
+0000110c <__utoa>:
+    110c:	deffef04 	addi	sp,sp,-68
+    1110:	dc000a15 	stw	r16,40(sp)
+    1114:	2821883a 	mov	r16,r5
+    1118:	01400034 	movhi	r5,0
+    111c:	dd400f15 	stw	r21,60(sp)
+    1120:	dcc00d15 	stw	r19,52(sp)
+    1124:	302b883a 	mov	r21,r6
+    1128:	2027883a 	mov	r19,r4
+    112c:	01800944 	movi	r6,37
+    1130:	29481904 	addi	r5,r5,8292
+    1134:	d809883a 	mov	r4,sp
+    1138:	dfc01015 	stw	ra,64(sp)
+    113c:	dd000e15 	stw	r20,56(sp)
+    1140:	dc800c15 	stw	r18,48(sp)
+    1144:	dc400b15 	stw	r17,44(sp)
+    1148:	00018780 	call	1878 <memcpy>
+    114c:	a8bfff84 	addi	r2,r21,-2
+    1150:	00c00884 	movi	r3,34
+    1154:	1880032e 	bgeu	r3,r2,1164 <__utoa+0x58>
+    1158:	80000005 	stb	zero,0(r16)
+    115c:	0005883a 	mov	r2,zero
+    1160:	00002006 	br	11e4 <__utoa+0xd8>
+    1164:	8029883a 	mov	r20,r16
+    1168:	0023883a 	mov	r17,zero
+    116c:	9809883a 	mov	r4,r19
+    1170:	a80b883a 	mov	r5,r21
+    1174:	0000f980 	call	f98 <__umodsi3>
+    1178:	d885883a 	add	r2,sp,r2
+    117c:	10800003 	ldbu	r2,0(r2)
+    1180:	9809883a 	mov	r4,r19
+    1184:	a80b883a 	mov	r5,r21
+    1188:	a0800005 	stb	r2,0(r20)
+    118c:	0000f340 	call	f34 <__udivsi3>
+    1190:	8c800044 	addi	r18,r17,1
+    1194:	1027883a 	mov	r19,r2
+    1198:	a5000044 	addi	r20,r20,1
+    119c:	10000226 	beq	r2,zero,11a8 <__utoa+0x9c>
+    11a0:	9023883a 	mov	r17,r18
+    11a4:	003ff106 	br	116c <__alt_data_end+0xfffe8acc>
+    11a8:	84a5883a 	add	r18,r16,r18
+    11ac:	90000005 	stb	zero,0(r18)
+    11b0:	8445883a 	add	r2,r16,r17
+    11b4:	8007883a 	mov	r3,r16
+    11b8:	1409c83a 	sub	r4,r2,r16
+    11bc:	1c0bc83a 	sub	r5,r3,r16
+    11c0:	2900070e 	bge	r5,r4,11e0 <__utoa+0xd4>
+    11c4:	11400003 	ldbu	r5,0(r2)
+    11c8:	19000003 	ldbu	r4,0(r3)
+    11cc:	10bfffc4 	addi	r2,r2,-1
+    11d0:	19400005 	stb	r5,0(r3)
+    11d4:	11000045 	stb	r4,1(r2)
+    11d8:	18c00044 	addi	r3,r3,1
+    11dc:	003ff606 	br	11b8 <__alt_data_end+0xfffe8b18>
+    11e0:	8005883a 	mov	r2,r16
+    11e4:	dfc01017 	ldw	ra,64(sp)
+    11e8:	dd400f17 	ldw	r21,60(sp)
+    11ec:	dd000e17 	ldw	r20,56(sp)
+    11f0:	dcc00d17 	ldw	r19,52(sp)
+    11f4:	dc800c17 	ldw	r18,48(sp)
+    11f8:	dc400b17 	ldw	r17,44(sp)
+    11fc:	dc000a17 	ldw	r16,40(sp)
+    1200:	dec01104 	addi	sp,sp,68
+    1204:	f800283a 	ret
+
+00001208 <utoa>:
+    1208:	000110c1 	jmpi	110c <__utoa>
+
+0000120c <print_repeat>:
+    120c:	defffb04 	addi	sp,sp,-20
+    1210:	dc800315 	stw	r18,12(sp)
+    1214:	dc400215 	stw	r17,8(sp)
+    1218:	dc000115 	stw	r16,4(sp)
+    121c:	dfc00415 	stw	ra,16(sp)
+    1220:	2025883a 	mov	r18,r4
+    1224:	2823883a 	mov	r17,r5
+    1228:	d9800005 	stb	r6,0(sp)
+    122c:	3821883a 	mov	r16,r7
+    1230:	04000a0e 	bge	zero,r16,125c <print_repeat+0x50>
+    1234:	88800117 	ldw	r2,4(r17)
+    1238:	01c00044 	movi	r7,1
+    123c:	d80d883a 	mov	r6,sp
+    1240:	880b883a 	mov	r5,r17
+    1244:	9009883a 	mov	r4,r18
+    1248:	103ee83a 	callr	r2
+    124c:	843fffc4 	addi	r16,r16,-1
+    1250:	103ff726 	beq	r2,zero,1230 <__alt_data_end+0xfffe8b90>
+    1254:	00bfffc4 	movi	r2,-1
+    1258:	00000106 	br	1260 <print_repeat+0x54>
+    125c:	0005883a 	mov	r2,zero
+    1260:	dfc00417 	ldw	ra,16(sp)
+    1264:	dc800317 	ldw	r18,12(sp)
+    1268:	dc400217 	ldw	r17,8(sp)
+    126c:	dc000117 	ldw	r16,4(sp)
+    1270:	dec00504 	addi	sp,sp,20
+    1274:	f800283a 	ret
+
+00001278 <___vfprintf_internal_r>:
+    1278:	deffe504 	addi	sp,sp,-108
+    127c:	d8c00804 	addi	r3,sp,32
+    1280:	ddc01815 	stw	r23,96(sp)
+    1284:	dd801715 	stw	r22,92(sp)
+    1288:	dd401615 	stw	r21,88(sp)
+    128c:	dd001515 	stw	r20,84(sp)
+    1290:	dcc01415 	stw	r19,80(sp)
+    1294:	dc801315 	stw	r18,76(sp)
+    1298:	dc401215 	stw	r17,72(sp)
+    129c:	dc001115 	stw	r16,68(sp)
+    12a0:	dfc01a15 	stw	ra,104(sp)
+    12a4:	df001915 	stw	fp,100(sp)
+    12a8:	2029883a 	mov	r20,r4
+    12ac:	2823883a 	mov	r17,r5
+    12b0:	382d883a 	mov	r22,r7
+    12b4:	d9800f15 	stw	r6,60(sp)
+    12b8:	0021883a 	mov	r16,zero
+    12bc:	d8000e15 	stw	zero,56(sp)
+    12c0:	d8000a15 	stw	zero,40(sp)
+    12c4:	002b883a 	mov	r21,zero
+    12c8:	0027883a 	mov	r19,zero
+    12cc:	0025883a 	mov	r18,zero
+    12d0:	d8000c15 	stw	zero,48(sp)
+    12d4:	d8000b15 	stw	zero,44(sp)
+    12d8:	002f883a 	mov	r23,zero
+    12dc:	d8c00915 	stw	r3,36(sp)
+    12e0:	d8c00f17 	ldw	r3,60(sp)
+    12e4:	19000003 	ldbu	r4,0(r3)
+    12e8:	20803fcc 	andi	r2,r4,255
+    12ec:	1080201c 	xori	r2,r2,128
+    12f0:	10bfe004 	addi	r2,r2,-128
+    12f4:	10011e26 	beq	r2,zero,1770 <___vfprintf_internal_r+0x4f8>
+    12f8:	00c00044 	movi	r3,1
+    12fc:	b8c01426 	beq	r23,r3,1350 <___vfprintf_internal_r+0xd8>
+    1300:	1dc00216 	blt	r3,r23,130c <___vfprintf_internal_r+0x94>
+    1304:	b8000626 	beq	r23,zero,1320 <___vfprintf_internal_r+0xa8>
+    1308:	00011506 	br	1760 <___vfprintf_internal_r+0x4e8>
+    130c:	01400084 	movi	r5,2
+    1310:	b9401d26 	beq	r23,r5,1388 <___vfprintf_internal_r+0x110>
+    1314:	014000c4 	movi	r5,3
+    1318:	b9402b26 	beq	r23,r5,13c8 <___vfprintf_internal_r+0x150>
+    131c:	00011006 	br	1760 <___vfprintf_internal_r+0x4e8>
+    1320:	01400944 	movi	r5,37
+    1324:	1140fc26 	beq	r2,r5,1718 <___vfprintf_internal_r+0x4a0>
+    1328:	88800117 	ldw	r2,4(r17)
+    132c:	d9000005 	stb	r4,0(sp)
+    1330:	01c00044 	movi	r7,1
+    1334:	d80d883a 	mov	r6,sp
+    1338:	880b883a 	mov	r5,r17
+    133c:	a009883a 	mov	r4,r20
+    1340:	103ee83a 	callr	r2
+    1344:	1000d81e 	bne	r2,zero,16a8 <___vfprintf_internal_r+0x430>
+    1348:	84000044 	addi	r16,r16,1
+    134c:	00010406 	br	1760 <___vfprintf_internal_r+0x4e8>
+    1350:	01400c04 	movi	r5,48
+    1354:	1140fa26 	beq	r2,r5,1740 <___vfprintf_internal_r+0x4c8>
+    1358:	01400944 	movi	r5,37
+    135c:	11400a1e 	bne	r2,r5,1388 <___vfprintf_internal_r+0x110>
+    1360:	d8800005 	stb	r2,0(sp)
+    1364:	88800117 	ldw	r2,4(r17)
+    1368:	b80f883a 	mov	r7,r23
+    136c:	d80d883a 	mov	r6,sp
+    1370:	880b883a 	mov	r5,r17
+    1374:	a009883a 	mov	r4,r20
+    1378:	103ee83a 	callr	r2
+    137c:	1000ca1e 	bne	r2,zero,16a8 <___vfprintf_internal_r+0x430>
+    1380:	84000044 	addi	r16,r16,1
+    1384:	0000f506 	br	175c <___vfprintf_internal_r+0x4e4>
+    1388:	25fff404 	addi	r23,r4,-48
+    138c:	bdc03fcc 	andi	r23,r23,255
+    1390:	00c00244 	movi	r3,9
+    1394:	1dc00936 	bltu	r3,r23,13bc <___vfprintf_internal_r+0x144>
+    1398:	00bfffc4 	movi	r2,-1
+    139c:	90800426 	beq	r18,r2,13b0 <___vfprintf_internal_r+0x138>
+    13a0:	01400284 	movi	r5,10
+    13a4:	9009883a 	mov	r4,r18
+    13a8:	0000ff00 	call	ff0 <__mulsi3>
+    13ac:	00000106 	br	13b4 <___vfprintf_internal_r+0x13c>
+    13b0:	0005883a 	mov	r2,zero
+    13b4:	b8a5883a 	add	r18,r23,r2
+    13b8:	0000e206 	br	1744 <___vfprintf_internal_r+0x4cc>
+    13bc:	01400b84 	movi	r5,46
+    13c0:	1140e426 	beq	r2,r5,1754 <___vfprintf_internal_r+0x4dc>
+    13c4:	05c00084 	movi	r23,2
+    13c8:	213ff404 	addi	r4,r4,-48
+    13cc:	27003fcc 	andi	fp,r4,255
+    13d0:	00c00244 	movi	r3,9
+    13d4:	1f000936 	bltu	r3,fp,13fc <___vfprintf_internal_r+0x184>
+    13d8:	00bfffc4 	movi	r2,-1
+    13dc:	98800426 	beq	r19,r2,13f0 <___vfprintf_internal_r+0x178>
+    13e0:	01400284 	movi	r5,10
+    13e4:	9809883a 	mov	r4,r19
+    13e8:	0000ff00 	call	ff0 <__mulsi3>
+    13ec:	00000106 	br	13f4 <___vfprintf_internal_r+0x17c>
+    13f0:	0005883a 	mov	r2,zero
+    13f4:	e0a7883a 	add	r19,fp,r2
+    13f8:	0000d906 	br	1760 <___vfprintf_internal_r+0x4e8>
+    13fc:	00c01b04 	movi	r3,108
+    1400:	10c0d226 	beq	r2,r3,174c <___vfprintf_internal_r+0x4d4>
+    1404:	013fffc4 	movi	r4,-1
+    1408:	99000226 	beq	r19,r4,1414 <___vfprintf_internal_r+0x19c>
+    140c:	d8000b15 	stw	zero,44(sp)
+    1410:	00000106 	br	1418 <___vfprintf_internal_r+0x1a0>
+    1414:	04c00044 	movi	r19,1
+    1418:	01001a44 	movi	r4,105
+    141c:	11001626 	beq	r2,r4,1478 <___vfprintf_internal_r+0x200>
+    1420:	20800916 	blt	r4,r2,1448 <___vfprintf_internal_r+0x1d0>
+    1424:	010018c4 	movi	r4,99
+    1428:	11008826 	beq	r2,r4,164c <___vfprintf_internal_r+0x3d4>
+    142c:	01001904 	movi	r4,100
+    1430:	11001126 	beq	r2,r4,1478 <___vfprintf_internal_r+0x200>
+    1434:	01001604 	movi	r4,88
+    1438:	1100c81e 	bne	r2,r4,175c <___vfprintf_internal_r+0x4e4>
+    143c:	00c00044 	movi	r3,1
+    1440:	d8c00e15 	stw	r3,56(sp)
+    1444:	00001506 	br	149c <___vfprintf_internal_r+0x224>
+    1448:	01001cc4 	movi	r4,115
+    144c:	11009826 	beq	r2,r4,16b0 <___vfprintf_internal_r+0x438>
+    1450:	20800416 	blt	r4,r2,1464 <___vfprintf_internal_r+0x1ec>
+    1454:	01001bc4 	movi	r4,111
+    1458:	1100c01e 	bne	r2,r4,175c <___vfprintf_internal_r+0x4e4>
+    145c:	05400204 	movi	r21,8
+    1460:	00000f06 	br	14a0 <___vfprintf_internal_r+0x228>
+    1464:	01001d44 	movi	r4,117
+    1468:	11000d26 	beq	r2,r4,14a0 <___vfprintf_internal_r+0x228>
+    146c:	01001e04 	movi	r4,120
+    1470:	11000a26 	beq	r2,r4,149c <___vfprintf_internal_r+0x224>
+    1474:	0000b906 	br	175c <___vfprintf_internal_r+0x4e4>
+    1478:	d8c00a17 	ldw	r3,40(sp)
+    147c:	b7000104 	addi	fp,r22,4
+    1480:	18000726 	beq	r3,zero,14a0 <___vfprintf_internal_r+0x228>
+    1484:	df000d15 	stw	fp,52(sp)
+    1488:	b5c00017 	ldw	r23,0(r22)
+    148c:	b800080e 	bge	r23,zero,14b0 <___vfprintf_internal_r+0x238>
+    1490:	05efc83a 	sub	r23,zero,r23
+    1494:	02400044 	movi	r9,1
+    1498:	00000606 	br	14b4 <___vfprintf_internal_r+0x23c>
+    149c:	05400404 	movi	r21,16
+    14a0:	b0c00104 	addi	r3,r22,4
+    14a4:	d8c00d15 	stw	r3,52(sp)
+    14a8:	b5c00017 	ldw	r23,0(r22)
+    14ac:	d8000a15 	stw	zero,40(sp)
+    14b0:	0013883a 	mov	r9,zero
+    14b4:	d839883a 	mov	fp,sp
+    14b8:	b8001726 	beq	r23,zero,1518 <___vfprintf_internal_r+0x2a0>
+    14bc:	a80b883a 	mov	r5,r21
+    14c0:	b809883a 	mov	r4,r23
+    14c4:	da401015 	stw	r9,64(sp)
+    14c8:	0000f340 	call	f34 <__udivsi3>
+    14cc:	a80b883a 	mov	r5,r21
+    14d0:	1009883a 	mov	r4,r2
+    14d4:	102d883a 	mov	r22,r2
+    14d8:	0000ff00 	call	ff0 <__mulsi3>
+    14dc:	b885c83a 	sub	r2,r23,r2
+    14e0:	00c00244 	movi	r3,9
+    14e4:	da401017 	ldw	r9,64(sp)
+    14e8:	18800216 	blt	r3,r2,14f4 <___vfprintf_internal_r+0x27c>
+    14ec:	10800c04 	addi	r2,r2,48
+    14f0:	00000506 	br	1508 <___vfprintf_internal_r+0x290>
+    14f4:	d8c00e17 	ldw	r3,56(sp)
+    14f8:	18000226 	beq	r3,zero,1504 <___vfprintf_internal_r+0x28c>
+    14fc:	10800dc4 	addi	r2,r2,55
+    1500:	00000106 	br	1508 <___vfprintf_internal_r+0x290>
+    1504:	108015c4 	addi	r2,r2,87
+    1508:	e0800005 	stb	r2,0(fp)
+    150c:	b02f883a 	mov	r23,r22
+    1510:	e7000044 	addi	fp,fp,1
+    1514:	003fe806 	br	14b8 <__alt_data_end+0xfffe8e18>
+    1518:	e6efc83a 	sub	r23,fp,sp
+    151c:	9dc5c83a 	sub	r2,r19,r23
+    1520:	0080090e 	bge	zero,r2,1548 <___vfprintf_internal_r+0x2d0>
+    1524:	e085883a 	add	r2,fp,r2
+    1528:	01400c04 	movi	r5,48
+    152c:	d8c00917 	ldw	r3,36(sp)
+    1530:	e009883a 	mov	r4,fp
+    1534:	e0c0032e 	bgeu	fp,r3,1544 <___vfprintf_internal_r+0x2cc>
+    1538:	e7000044 	addi	fp,fp,1
+    153c:	21400005 	stb	r5,0(r4)
+    1540:	e0bffa1e 	bne	fp,r2,152c <__alt_data_end+0xfffe8e8c>
+    1544:	e6efc83a 	sub	r23,fp,sp
+    1548:	d8c00b17 	ldw	r3,44(sp)
+    154c:	4dd1883a 	add	r8,r9,r23
+    1550:	922dc83a 	sub	r22,r18,r8
+    1554:	18001626 	beq	r3,zero,15b0 <___vfprintf_internal_r+0x338>
+    1558:	48000a26 	beq	r9,zero,1584 <___vfprintf_internal_r+0x30c>
+    155c:	00800b44 	movi	r2,45
+    1560:	d8800805 	stb	r2,32(sp)
+    1564:	88800117 	ldw	r2,4(r17)
+    1568:	01c00044 	movi	r7,1
+    156c:	d9800804 	addi	r6,sp,32
+    1570:	880b883a 	mov	r5,r17
+    1574:	a009883a 	mov	r4,r20
+    1578:	103ee83a 	callr	r2
+    157c:	10004a1e 	bne	r2,zero,16a8 <___vfprintf_internal_r+0x430>
+    1580:	84000044 	addi	r16,r16,1
+    1584:	0580070e 	bge	zero,r22,15a4 <___vfprintf_internal_r+0x32c>
+    1588:	b00f883a 	mov	r7,r22
+    158c:	01800c04 	movi	r6,48
+    1590:	880b883a 	mov	r5,r17
+    1594:	a009883a 	mov	r4,r20
+    1598:	000120c0 	call	120c <print_repeat>
+    159c:	1000421e 	bne	r2,zero,16a8 <___vfprintf_internal_r+0x430>
+    15a0:	85a1883a 	add	r16,r16,r22
+    15a4:	e02d883a 	mov	r22,fp
+    15a8:	bf2fc83a 	sub	r23,r23,fp
+    15ac:	00002006 	br	1630 <___vfprintf_internal_r+0x3b8>
+    15b0:	0580090e 	bge	zero,r22,15d8 <___vfprintf_internal_r+0x360>
+    15b4:	b00f883a 	mov	r7,r22
+    15b8:	01800804 	movi	r6,32
+    15bc:	880b883a 	mov	r5,r17
+    15c0:	a009883a 	mov	r4,r20
+    15c4:	da401015 	stw	r9,64(sp)
+    15c8:	000120c0 	call	120c <print_repeat>
+    15cc:	da401017 	ldw	r9,64(sp)
+    15d0:	1000351e 	bne	r2,zero,16a8 <___vfprintf_internal_r+0x430>
+    15d4:	85a1883a 	add	r16,r16,r22
+    15d8:	483ff226 	beq	r9,zero,15a4 <__alt_data_end+0xfffe8f04>
+    15dc:	00800b44 	movi	r2,45
+    15e0:	d8800805 	stb	r2,32(sp)
+    15e4:	88800117 	ldw	r2,4(r17)
+    15e8:	01c00044 	movi	r7,1
+    15ec:	d9800804 	addi	r6,sp,32
+    15f0:	880b883a 	mov	r5,r17
+    15f4:	a009883a 	mov	r4,r20
+    15f8:	103ee83a 	callr	r2
+    15fc:	10002a1e 	bne	r2,zero,16a8 <___vfprintf_internal_r+0x430>
+    1600:	84000044 	addi	r16,r16,1
+    1604:	003fe706 	br	15a4 <__alt_data_end+0xfffe8f04>
+    1608:	b5bfffc4 	addi	r22,r22,-1
+    160c:	b0800003 	ldbu	r2,0(r22)
+    1610:	01c00044 	movi	r7,1
+    1614:	d9800804 	addi	r6,sp,32
+    1618:	d8800805 	stb	r2,32(sp)
+    161c:	88800117 	ldw	r2,4(r17)
+    1620:	880b883a 	mov	r5,r17
+    1624:	a009883a 	mov	r4,r20
+    1628:	103ee83a 	callr	r2
+    162c:	10001e1e 	bne	r2,zero,16a8 <___vfprintf_internal_r+0x430>
+    1630:	8585c83a 	sub	r2,r16,r22
+    1634:	b5c9883a 	add	r4,r22,r23
+    1638:	e085883a 	add	r2,fp,r2
+    163c:	013ff216 	blt	zero,r4,1608 <__alt_data_end+0xfffe8f68>
+    1640:	1021883a 	mov	r16,r2
+    1644:	dd800d17 	ldw	r22,52(sp)
+    1648:	00004406 	br	175c <___vfprintf_internal_r+0x4e4>
+    164c:	00800044 	movi	r2,1
+    1650:	1480080e 	bge	r2,r18,1674 <___vfprintf_internal_r+0x3fc>
+    1654:	95ffffc4 	addi	r23,r18,-1
+    1658:	b80f883a 	mov	r7,r23
+    165c:	01800804 	movi	r6,32
+    1660:	880b883a 	mov	r5,r17
+    1664:	a009883a 	mov	r4,r20
+    1668:	000120c0 	call	120c <print_repeat>
+    166c:	10000e1e 	bne	r2,zero,16a8 <___vfprintf_internal_r+0x430>
+    1670:	85e1883a 	add	r16,r16,r23
+    1674:	b0800017 	ldw	r2,0(r22)
+    1678:	01c00044 	movi	r7,1
+    167c:	d80d883a 	mov	r6,sp
+    1680:	d8800005 	stb	r2,0(sp)
+    1684:	88800117 	ldw	r2,4(r17)
+    1688:	880b883a 	mov	r5,r17
+    168c:	a009883a 	mov	r4,r20
+    1690:	b5c00104 	addi	r23,r22,4
+    1694:	103ee83a 	callr	r2
+    1698:	1000031e 	bne	r2,zero,16a8 <___vfprintf_internal_r+0x430>
+    169c:	84000044 	addi	r16,r16,1
+    16a0:	b82d883a 	mov	r22,r23
+    16a4:	00002d06 	br	175c <___vfprintf_internal_r+0x4e4>
+    16a8:	00bfffc4 	movi	r2,-1
+    16ac:	00003106 	br	1774 <___vfprintf_internal_r+0x4fc>
+    16b0:	b5c00017 	ldw	r23,0(r22)
+    16b4:	b7000104 	addi	fp,r22,4
+    16b8:	b809883a 	mov	r4,r23
+    16bc:	00018a00 	call	18a0 <strlen>
+    16c0:	9091c83a 	sub	r8,r18,r2
+    16c4:	102d883a 	mov	r22,r2
+    16c8:	0200090e 	bge	zero,r8,16f0 <___vfprintf_internal_r+0x478>
+    16cc:	400f883a 	mov	r7,r8
+    16d0:	01800804 	movi	r6,32
+    16d4:	880b883a 	mov	r5,r17
+    16d8:	a009883a 	mov	r4,r20
+    16dc:	da001015 	stw	r8,64(sp)
+    16e0:	000120c0 	call	120c <print_repeat>
+    16e4:	da001017 	ldw	r8,64(sp)
+    16e8:	103fef1e 	bne	r2,zero,16a8 <__alt_data_end+0xfffe9008>
+    16ec:	8221883a 	add	r16,r16,r8
+    16f0:	88800117 	ldw	r2,4(r17)
+    16f4:	b00f883a 	mov	r7,r22
+    16f8:	b80d883a 	mov	r6,r23
+    16fc:	880b883a 	mov	r5,r17
+    1700:	a009883a 	mov	r4,r20
+    1704:	103ee83a 	callr	r2
+    1708:	103fe71e 	bne	r2,zero,16a8 <__alt_data_end+0xfffe9008>
+    170c:	85a1883a 	add	r16,r16,r22
+    1710:	e02d883a 	mov	r22,fp
+    1714:	00001106 	br	175c <___vfprintf_internal_r+0x4e4>
+    1718:	00c00044 	movi	r3,1
+    171c:	04ffffc4 	movi	r19,-1
+    1720:	d8000e15 	stw	zero,56(sp)
+    1724:	d8c00a15 	stw	r3,40(sp)
+    1728:	05400284 	movi	r21,10
+    172c:	9825883a 	mov	r18,r19
+    1730:	d8000c15 	stw	zero,48(sp)
+    1734:	d8000b15 	stw	zero,44(sp)
+    1738:	182f883a 	mov	r23,r3
+    173c:	00000806 	br	1760 <___vfprintf_internal_r+0x4e8>
+    1740:	ddc00b15 	stw	r23,44(sp)
+    1744:	05c00084 	movi	r23,2
+    1748:	00000506 	br	1760 <___vfprintf_internal_r+0x4e8>
+    174c:	00c00044 	movi	r3,1
+    1750:	d8c00c15 	stw	r3,48(sp)
+    1754:	05c000c4 	movi	r23,3
+    1758:	00000106 	br	1760 <___vfprintf_internal_r+0x4e8>
+    175c:	002f883a 	mov	r23,zero
+    1760:	d8c00f17 	ldw	r3,60(sp)
+    1764:	18c00044 	addi	r3,r3,1
+    1768:	d8c00f15 	stw	r3,60(sp)
+    176c:	003edc06 	br	12e0 <__alt_data_end+0xfffe8c40>
+    1770:	8005883a 	mov	r2,r16
+    1774:	dfc01a17 	ldw	ra,104(sp)
+    1778:	df001917 	ldw	fp,100(sp)
+    177c:	ddc01817 	ldw	r23,96(sp)
+    1780:	dd801717 	ldw	r22,92(sp)
+    1784:	dd401617 	ldw	r21,88(sp)
+    1788:	dd001517 	ldw	r20,84(sp)
+    178c:	dcc01417 	ldw	r19,80(sp)
+    1790:	dc801317 	ldw	r18,76(sp)
+    1794:	dc401217 	ldw	r17,72(sp)
+    1798:	dc001117 	ldw	r16,68(sp)
+    179c:	dec01b04 	addi	sp,sp,108
+    17a0:	f800283a 	ret
+
+000017a4 <__vfprintf_internal>:
+    17a4:	00800034 	movhi	r2,0
+    17a8:	10887504 	addi	r2,r2,8660
+    17ac:	300f883a 	mov	r7,r6
+    17b0:	280d883a 	mov	r6,r5
+    17b4:	200b883a 	mov	r5,r4
+    17b8:	11000017 	ldw	r4,0(r2)
+    17bc:	00012781 	jmpi	1278 <___vfprintf_internal_r>
+
+000017c0 <__sfvwrite_small_dev>:
+    17c0:	2880000b 	ldhu	r2,0(r5)
+    17c4:	1080020c 	andi	r2,r2,8
+    17c8:	10002126 	beq	r2,zero,1850 <__sfvwrite_small_dev+0x90>
+    17cc:	2880008f 	ldh	r2,2(r5)
+    17d0:	defffa04 	addi	sp,sp,-24
+    17d4:	dc000015 	stw	r16,0(sp)
+    17d8:	dfc00515 	stw	ra,20(sp)
+    17dc:	dd000415 	stw	r20,16(sp)
+    17e0:	dcc00315 	stw	r19,12(sp)
+    17e4:	dc800215 	stw	r18,8(sp)
+    17e8:	dc400115 	stw	r17,4(sp)
+    17ec:	2821883a 	mov	r16,r5
+    17f0:	10001216 	blt	r2,zero,183c <__sfvwrite_small_dev+0x7c>
+    17f4:	2027883a 	mov	r19,r4
+    17f8:	3025883a 	mov	r18,r6
+    17fc:	3823883a 	mov	r17,r7
+    1800:	05010004 	movi	r20,1024
+    1804:	04400b0e 	bge	zero,r17,1834 <__sfvwrite_small_dev+0x74>
+    1808:	880f883a 	mov	r7,r17
+    180c:	a440010e 	bge	r20,r17,1814 <__sfvwrite_small_dev+0x54>
+    1810:	01c10004 	movi	r7,1024
+    1814:	8140008f 	ldh	r5,2(r16)
+    1818:	900d883a 	mov	r6,r18
+    181c:	9809883a 	mov	r4,r19
+    1820:	00018bc0 	call	18bc <_write_r>
+    1824:	0080050e 	bge	zero,r2,183c <__sfvwrite_small_dev+0x7c>
+    1828:	88a3c83a 	sub	r17,r17,r2
+    182c:	90a5883a 	add	r18,r18,r2
+    1830:	003ff406 	br	1804 <__alt_data_end+0xfffe9164>
+    1834:	0005883a 	mov	r2,zero
+    1838:	00000706 	br	1858 <__sfvwrite_small_dev+0x98>
+    183c:	8080000b 	ldhu	r2,0(r16)
+    1840:	10801014 	ori	r2,r2,64
+    1844:	8080000d 	sth	r2,0(r16)
+    1848:	00bfffc4 	movi	r2,-1
+    184c:	00000206 	br	1858 <__sfvwrite_small_dev+0x98>
+    1850:	00bfffc4 	movi	r2,-1
+    1854:	f800283a 	ret
+    1858:	dfc00517 	ldw	ra,20(sp)
+    185c:	dd000417 	ldw	r20,16(sp)
+    1860:	dcc00317 	ldw	r19,12(sp)
+    1864:	dc800217 	ldw	r18,8(sp)
+    1868:	dc400117 	ldw	r17,4(sp)
+    186c:	dc000017 	ldw	r16,0(sp)
+    1870:	dec00604 	addi	sp,sp,24
+    1874:	f800283a 	ret
+
+00001878 <memcpy>:
+    1878:	2005883a 	mov	r2,r4
+    187c:	2007883a 	mov	r3,r4
+    1880:	218d883a 	add	r6,r4,r6
+    1884:	19800526 	beq	r3,r6,189c <memcpy+0x24>
+    1888:	29000003 	ldbu	r4,0(r5)
+    188c:	18c00044 	addi	r3,r3,1
+    1890:	29400044 	addi	r5,r5,1
+    1894:	193fffc5 	stb	r4,-1(r3)
+    1898:	003ffa06 	br	1884 <__alt_data_end+0xfffe91e4>
+    189c:	f800283a 	ret
+
+000018a0 <strlen>:
+    18a0:	2005883a 	mov	r2,r4
+    18a4:	10c00007 	ldb	r3,0(r2)
+    18a8:	18000226 	beq	r3,zero,18b4 <strlen+0x14>
+    18ac:	10800044 	addi	r2,r2,1
+    18b0:	003ffc06 	br	18a4 <__alt_data_end+0xfffe9204>
+    18b4:	1105c83a 	sub	r2,r2,r4
+    18b8:	f800283a 	ret
+
+000018bc <_write_r>:
+    18bc:	defffd04 	addi	sp,sp,-12
+    18c0:	dc000015 	stw	r16,0(sp)
+    18c4:	04000034 	movhi	r16,0
+    18c8:	dc400115 	stw	r17,4(sp)
+    18cc:	8408e204 	addi	r16,r16,9096
+    18d0:	2023883a 	mov	r17,r4
+    18d4:	2809883a 	mov	r4,r5
+    18d8:	300b883a 	mov	r5,r6
+    18dc:	380d883a 	mov	r6,r7
+    18e0:	dfc00215 	stw	ra,8(sp)
+    18e4:	80000015 	stw	zero,0(r16)
+    18e8:	0001c580 	call	1c58 <write>
+    18ec:	00ffffc4 	movi	r3,-1
+    18f0:	10c0031e 	bne	r2,r3,1900 <_write_r+0x44>
+    18f4:	80c00017 	ldw	r3,0(r16)
+    18f8:	18000126 	beq	r3,zero,1900 <_write_r+0x44>
+    18fc:	88c00015 	stw	r3,0(r17)
+    1900:	dfc00217 	ldw	ra,8(sp)
+    1904:	dc400117 	ldw	r17,4(sp)
+    1908:	dc000017 	ldw	r16,0(sp)
+    190c:	dec00304 	addi	sp,sp,12
+    1910:	f800283a 	ret
+
+00001914 <alt_getchar>:
+#else
+#ifdef ALT_USE_DIRECT_DRIVERS
+    ALT_DRIVER_READ_EXTERNS(ALT_STDIN_DEV);
+    char c;
+
+    if (ALT_DRIVER_READ(ALT_STDIN_DEV, &c, 1, alt_fd_list[STDIN_FILENO].fd_flags) <= 0) {
+    1914:	00800034 	movhi	r2,0
+    1918:	10885e04 	addi	r2,r2,8568
+    191c:	11c00217 	ldw	r7,8(r2)
+ * Uses the ALT_DRIVER_READ() macro to call directly to driver if available.
+ * Otherwise, uses newlib provided getchar() routine.
+ */
+int 
+alt_getchar(void)
+{
+    1920:	defffe04 	addi	sp,sp,-8
+#else
+#ifdef ALT_USE_DIRECT_DRIVERS
+    ALT_DRIVER_READ_EXTERNS(ALT_STDIN_DEV);
+    char c;
+
+    if (ALT_DRIVER_READ(ALT_STDIN_DEV, &c, 1, alt_fd_list[STDIN_FILENO].fd_flags) <= 0) {
+    1924:	01000034 	movhi	r4,0
+    1928:	01800044 	movi	r6,1
+    192c:	d80b883a 	mov	r5,sp
+    1930:	21087604 	addi	r4,r4,8664
+ * Uses the ALT_DRIVER_READ() macro to call directly to driver if available.
+ * Otherwise, uses newlib provided getchar() routine.
+ */
+int 
+alt_getchar(void)
+{
+    1934:	dfc00115 	stw	ra,4(sp)
+#else
+#ifdef ALT_USE_DIRECT_DRIVERS
+    ALT_DRIVER_READ_EXTERNS(ALT_STDIN_DEV);
+    char c;
+
+    if (ALT_DRIVER_READ(ALT_STDIN_DEV, &c, 1, alt_fd_list[STDIN_FILENO].fd_flags) <= 0) {
+    1938:	0001cdc0 	call	1cdc <altera_avalon_jtag_uart_read>
+    193c:	0080020e 	bge	zero,r2,1948 <alt_getchar+0x34>
+        return -1;
+    }
+    return c;
+    1940:	d8800007 	ldb	r2,0(sp)
+    1944:	00000106 	br	194c <alt_getchar+0x38>
+#ifdef ALT_USE_DIRECT_DRIVERS
+    ALT_DRIVER_READ_EXTERNS(ALT_STDIN_DEV);
+    char c;
+
+    if (ALT_DRIVER_READ(ALT_STDIN_DEV, &c, 1, alt_fd_list[STDIN_FILENO].fd_flags) <= 0) {
+        return -1;
+    1948:	00bfffc4 	movi	r2,-1
+    return c;
+#else
+    return getchar();
+#endif
+#endif
+}
+    194c:	dfc00117 	ldw	ra,4(sp)
+    1950:	dec00204 	addi	sp,sp,8
+    1954:	f800283a 	ret
+
+00001958 <alt_load>:
+ * there is no bootloader, so this application is responsible for loading to
+ * RAM any sections that are required.
+ */  
+
+void alt_load (void)
+{
+    1958:	deffff04 	addi	sp,sp,-4
+    195c:	01000034 	movhi	r4,0
+    1960:	01400034 	movhi	r5,0
+    1964:	dfc00015 	stw	ra,0(sp)
+    1968:	21082604 	addi	r4,r4,8344
+    196c:	29487d04 	addi	r5,r5,8692
+
+static void ALT_INLINE alt_load_section (alt_u32* from, 
+                                         alt_u32* to, 
+                                         alt_u32* end)
+{
+  if (to != from)
+    1970:	2140061e 	bne	r4,r5,198c <alt_load+0x34>
+    1974:	01000034 	movhi	r4,0
+    1978:	01400034 	movhi	r5,0
+    197c:	21000804 	addi	r4,r4,32
+    1980:	29400804 	addi	r5,r5,32
+    1984:	2140121e 	bne	r4,r5,19d0 <alt_load+0x78>
+    1988:	00000b06 	br	19b8 <alt_load+0x60>
+    198c:	00c00034 	movhi	r3,0
+    1990:	18c87d04 	addi	r3,r3,8692
+    1994:	1907c83a 	sub	r3,r3,r4
+    1998:	0005883a 	mov	r2,zero
+  {
+    while( to != end )
+    199c:	10fff526 	beq	r2,r3,1974 <__alt_data_end+0xfffe92d4>
+    {
+      *to++ = *from++;
+    19a0:	114f883a 	add	r7,r2,r5
+    19a4:	39c00017 	ldw	r7,0(r7)
+    19a8:	110d883a 	add	r6,r2,r4
+    19ac:	10800104 	addi	r2,r2,4
+    19b0:	31c00015 	stw	r7,0(r6)
+    19b4:	003ff906 	br	199c <__alt_data_end+0xfffe92fc>
+    19b8:	01000034 	movhi	r4,0
+    19bc:	01400034 	movhi	r5,0
+    19c0:	21078304 	addi	r4,r4,7692
+    19c4:	29478304 	addi	r5,r5,7692
+
+static void ALT_INLINE alt_load_section (alt_u32* from, 
+                                         alt_u32* to, 
+                                         alt_u32* end)
+{
+  if (to != from)
+    19c8:	2140101e 	bne	r4,r5,1a0c <alt_load+0xb4>
+    19cc:	00000b06 	br	19fc <alt_load+0xa4>
+    19d0:	00c00034 	movhi	r3,0
+    19d4:	18c00804 	addi	r3,r3,32
+    19d8:	1907c83a 	sub	r3,r3,r4
+    19dc:	0005883a 	mov	r2,zero
+  {
+    while( to != end )
+    19e0:	10fff526 	beq	r2,r3,19b8 <__alt_data_end+0xfffe9318>
+    {
+      *to++ = *from++;
+    19e4:	114f883a 	add	r7,r2,r5
+    19e8:	39c00017 	ldw	r7,0(r7)
+    19ec:	110d883a 	add	r6,r2,r4
+    19f0:	10800104 	addi	r2,r2,4
+    19f4:	31c00015 	stw	r7,0(r6)
+    19f8:	003ff906 	br	19e0 <__alt_data_end+0xfffe9340>
+  
+  /*
+   * Now ensure that the caches are in synch.
+   */
+  
+  alt_dcache_flush_all();
+    19fc:	0001df40 	call	1df4 <alt_dcache_flush_all>
+  alt_icache_flush_all();
+}
+    1a00:	dfc00017 	ldw	ra,0(sp)
+    1a04:	dec00104 	addi	sp,sp,4
+  /*
+   * Now ensure that the caches are in synch.
+   */
+  
+  alt_dcache_flush_all();
+  alt_icache_flush_all();
+    1a08:	0001e001 	jmpi	1e00 <alt_icache_flush_all>
+    1a0c:	00c00034 	movhi	r3,0
+    1a10:	18c82604 	addi	r3,r3,8344
+    1a14:	1907c83a 	sub	r3,r3,r4
+
+static void ALT_INLINE alt_load_section (alt_u32* from, 
+                                         alt_u32* to, 
+                                         alt_u32* end)
+{
+  if (to != from)
+    1a18:	0005883a 	mov	r2,zero
+  {
+    while( to != end )
+    1a1c:	18bff726 	beq	r3,r2,19fc <__alt_data_end+0xfffe935c>
+    {
+      *to++ = *from++;
+    1a20:	114f883a 	add	r7,r2,r5
+    1a24:	39c00017 	ldw	r7,0(r7)
+    1a28:	110d883a 	add	r6,r2,r4
+    1a2c:	10800104 	addi	r2,r2,4
+    1a30:	31c00015 	stw	r7,0(r6)
+    1a34:	003ff906 	br	1a1c <__alt_data_end+0xfffe937c>
+
+00001a38 <alt_main>:
+ * devices/filesystems/components in the system; and call the entry point for
+ * the users application, i.e. main().
+ */
+
+void alt_main (void)
+{
+    1a38:	deffff04 	addi	sp,sp,-4
+#endif
+
+  /* ALT LOG - please see HAL/sys/alt_log_printf.h for details */
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Entering alt_main, calling alt_irq_init.\r\n");
+  /* Initialize the interrupt controller. */
+  alt_irq_init (NULL);
+    1a3c:	0009883a 	mov	r4,zero
+ * devices/filesystems/components in the system; and call the entry point for
+ * the users application, i.e. main().
+ */
+
+void alt_main (void)
+{
+    1a40:	dfc00015 	stw	ra,0(sp)
+#endif
+
+  /* ALT LOG - please see HAL/sys/alt_log_printf.h for details */
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Entering alt_main, calling alt_irq_init.\r\n");
+  /* Initialize the interrupt controller. */
+  alt_irq_init (NULL);
+    1a44:	0001cb80 	call	1cb8 <alt_irq_init>
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Done OS Init, calling alt_sem_create.\r\n");
+  ALT_SEM_CREATE (&alt_fd_list_lock, 1);
+
+  /* Initialize the device drivers/software components. */
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Calling alt_sys_init.\r\n");
+  alt_sys_init();
+    1a48:	0001cd80 	call	1cd8 <alt_sys_init>
+   */
+
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Calling main.\r\n");
+
+#ifdef ALT_NO_EXIT
+  main (alt_argc, alt_argv, alt_envp);
+    1a4c:	d1a06f17 	ldw	r6,-32324(gp)
+    1a50:	d1607017 	ldw	r5,-32320(gp)
+    1a54:	d1207117 	ldw	r4,-32316(gp)
+  close(STDOUT_FILENO);
+  exit (result);
+#endif
+
+  ALT_LOG_PRINT_BOOT("[alt_main.c] After main - we should not be here?.\r\n");
+}
+    1a58:	dfc00017 	ldw	ra,0(sp)
+    1a5c:	dec00104 	addi	sp,sp,4
+   */
+
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Calling main.\r\n");
+
+#ifdef ALT_NO_EXIT
+  main (alt_argc, alt_argv, alt_envp);
+    1a60:	000005c1 	jmpi	5c <main>
+
+00001a64 <alt_printf>:
+/* 
+ * ALT printf function 
+ */
+void 
+alt_printf(const char* fmt, ... )
+{
+    1a64:	defff204 	addi	sp,sp,-56
+    1a68:	2005883a 	mov	r2,r4
+    1a6c:	dfc00a15 	stw	ra,40(sp)
+    1a70:	df000915 	stw	fp,36(sp)
+    1a74:	ddc00815 	stw	r23,32(sp)
+    1a78:	dd800715 	stw	r22,28(sp)
+    1a7c:	dd400615 	stw	r21,24(sp)
+    1a80:	dd000515 	stw	r20,20(sp)
+    1a84:	dcc00415 	stw	r19,16(sp)
+    1a88:	dc800315 	stw	r18,12(sp)
+    1a8c:	dc400215 	stw	r17,8(sp)
+    1a90:	dc000115 	stw	r16,4(sp)
+    1a94:	d9400b15 	stw	r5,44(sp)
+    1a98:	d9800c15 	stw	r6,48(sp)
+    1a9c:	d9c00d15 	stw	r7,52(sp)
+    w = fmt;
+    while ((c = *w++) != 0)
+    {
+        /* If not a format escape character, just print  */
+        /* character.  Otherwise, process format string. */
+        if (c != '%')
+    1aa0:	04000944 	movi	r16,37
+ */
+void 
+alt_printf(const char* fmt, ... )
+{
+	va_list args;
+	va_start(args, fmt);
+    1aa4:	dd400b04 	addi	r21,sp,44
+                if (c == '%')
+                {
+                    /* Process "%" escape sequence. */
+                    alt_putchar(c);
+                } 
+                else if (c == 'c')
+    1aa8:	048018c4 	movi	r18,99
+                {
+                    int v = va_arg(args, int);
+                    alt_putchar(v);
+                }
+                else if (c == 'x')
+    1aac:	04c01e04 	movi	r19,120
+                        else
+                            c = 'a' + digit - 10;
+                        alt_putchar(c);
+                    }
+                }
+                else if (c == 's')
+    1ab0:	05001cc4 	movi	r20,115
+    const char *w;
+    char c;
+
+    /* Process format string. */
+    w = fmt;
+    while ((c = *w++) != 0)
+    1ab4:	11000007 	ldb	r4,0(r2)
+    1ab8:	20003a26 	beq	r4,zero,1ba4 <alt_printf+0x140>
+    {
+        /* If not a format escape character, just print  */
+        /* character.  Otherwise, process format string. */
+        if (c != '%')
+    1abc:	24000226 	beq	r4,r16,1ac8 <alt_printf+0x64>
+    const char *w;
+    char c;
+
+    /* Process format string. */
+    w = fmt;
+    while ((c = *w++) != 0)
+    1ac0:	14400044 	addi	r17,r2,1
+    1ac4:	00001406 	br	1b18 <alt_printf+0xb4>
+        }
+        else
+        {
+            /* Get format character.  If none     */
+            /* available, processing is complete. */
+            if ((c = *w++) != 0)
+    1ac8:	14400084 	addi	r17,r2,2
+    1acc:	10800047 	ldb	r2,1(r2)
+    1ad0:	10003426 	beq	r2,zero,1ba4 <alt_printf+0x140>
+            {
+                if (c == '%')
+    1ad4:	1400021e 	bne	r2,r16,1ae0 <alt_printf+0x7c>
+                {
+                    /* Process "%" escape sequence. */
+                    alt_putchar(c);
+    1ad8:	8009883a 	mov	r4,r16
+    1adc:	00000e06 	br	1b18 <alt_printf+0xb4>
+                } 
+                else if (c == 'c')
+    1ae0:	1480051e 	bne	r2,r18,1af8 <alt_printf+0x94>
+                {
+                    int v = va_arg(args, int);
+                    alt_putchar(v);
+    1ae4:	a9000017 	ldw	r4,0(r21)
+                    /* Process "%" escape sequence. */
+                    alt_putchar(c);
+                } 
+                else if (c == 'c')
+                {
+                    int v = va_arg(args, int);
+    1ae8:	ad800104 	addi	r22,r21,4
+    1aec:	b02b883a 	mov	r21,r22
+                    alt_putchar(v);
+    1af0:	0001bd40 	call	1bd4 <alt_putchar>
+    1af4:	00002906 	br	1b9c <alt_printf+0x138>
+                }
+                else if (c == 'x')
+    1af8:	14c0201e 	bne	r2,r19,1b7c <alt_printf+0x118>
+                {
+                    /* Process hexadecimal number format. */
+                    unsigned long v = va_arg(args, unsigned long);
+    1afc:	adc00017 	ldw	r23,0(r21)
+    1b00:	ad400104 	addi	r21,r21,4
+                    unsigned long digit;
+                    int digit_shift;
+
+                    /* If the number value is zero, just print and continue. */
+                    if (v == 0)
+    1b04:	b8000326 	beq	r23,zero,1b14 <alt_printf+0xb0>
+    1b08:	05800704 	movi	r22,28
+                        continue;
+                    }
+
+                    /* Find first non-zero digit. */
+                    digit_shift = 28;
+                    while (!(v & (0xF << digit_shift)))
+    1b0c:	00c003c4 	movi	r3,15
+    1b10:	00000306 	br	1b20 <alt_printf+0xbc>
+                    int digit_shift;
+
+                    /* If the number value is zero, just print and continue. */
+                    if (v == 0)
+                    {
+                        alt_putchar('0');
+    1b14:	01000c04 	movi	r4,48
+    1b18:	0001bd40 	call	1bd4 <alt_putchar>
+                        continue;
+    1b1c:	00001f06 	br	1b9c <alt_printf+0x138>
+                    }
+
+                    /* Find first non-zero digit. */
+                    digit_shift = 28;
+                    while (!(v & (0xF << digit_shift)))
+    1b20:	1d84983a 	sll	r2,r3,r22
+    1b24:	15c4703a 	and	r2,r2,r23
+    1b28:	1000021e 	bne	r2,zero,1b34 <alt_printf+0xd0>
+                        digit_shift -= 4;
+    1b2c:	b5bfff04 	addi	r22,r22,-4
+    1b30:	003ffb06 	br	1b20 <__alt_data_end+0xfffe9480>
+
+                    /* Print digits. */
+                    for (; digit_shift >= 0; digit_shift -= 4)
+                    {
+                        digit = (v & (0xF << digit_shift)) >> digit_shift;
+    1b34:	070003c4 	movi	fp,15
+                        if (digit <= 9)
+    1b38:	00c00244 	movi	r3,9
+                    digit_shift = 28;
+                    while (!(v & (0xF << digit_shift)))
+                        digit_shift -= 4;
+
+                    /* Print digits. */
+                    for (; digit_shift >= 0; digit_shift -= 4)
+    1b3c:	b0001716 	blt	r22,zero,1b9c <alt_printf+0x138>
+                    {
+                        digit = (v & (0xF << digit_shift)) >> digit_shift;
+    1b40:	e588983a 	sll	r4,fp,r22
+    1b44:	25c8703a 	and	r4,r4,r23
+    1b48:	2588d83a 	srl	r4,r4,r22
+                        if (digit <= 9)
+    1b4c:	19000236 	bltu	r3,r4,1b58 <alt_printf+0xf4>
+                            c = '0' + digit;
+    1b50:	21000c04 	addi	r4,r4,48
+    1b54:	00000106 	br	1b5c <alt_printf+0xf8>
+                        else
+                            c = 'a' + digit - 10;
+    1b58:	210015c4 	addi	r4,r4,87
+                        alt_putchar(c);
+    1b5c:	21003fcc 	andi	r4,r4,255
+    1b60:	2100201c 	xori	r4,r4,128
+    1b64:	213fe004 	addi	r4,r4,-128
+    1b68:	d8c00015 	stw	r3,0(sp)
+    1b6c:	0001bd40 	call	1bd4 <alt_putchar>
+                    digit_shift = 28;
+                    while (!(v & (0xF << digit_shift)))
+                        digit_shift -= 4;
+
+                    /* Print digits. */
+                    for (; digit_shift >= 0; digit_shift -= 4)
+    1b70:	b5bfff04 	addi	r22,r22,-4
+    1b74:	d8c00017 	ldw	r3,0(sp)
+    1b78:	003ff006 	br	1b3c <__alt_data_end+0xfffe949c>
+                        else
+                            c = 'a' + digit - 10;
+                        alt_putchar(c);
+                    }
+                }
+                else if (c == 's')
+    1b7c:	1500071e 	bne	r2,r20,1b9c <alt_printf+0x138>
+                {
+                    /* Process string format. */
+                    char *s = va_arg(args, char *);
+    1b80:	ad800017 	ldw	r22,0(r21)
+    1b84:	ad400104 	addi	r21,r21,4
+
+                    while(*s)
+    1b88:	b1000007 	ldb	r4,0(r22)
+    1b8c:	20000326 	beq	r4,zero,1b9c <alt_printf+0x138>
+                      alt_putchar(*s++);
+    1b90:	b5800044 	addi	r22,r22,1
+    1b94:	0001bd40 	call	1bd4 <alt_putchar>
+    1b98:	003ffb06 	br	1b88 <__alt_data_end+0xfffe94e8>
+                    /* Process "%" escape sequence. */
+                    alt_putchar(c);
+                } 
+                else if (c == 'c')
+                {
+                    int v = va_arg(args, int);
+    1b9c:	8805883a 	mov	r2,r17
+    1ba0:	003fc406 	br	1ab4 <__alt_data_end+0xfffe9414>
+        }
+    }
+#ifdef ALT_SEMIHOSTING
+    alt_putbufflush();
+#endif
+}
+    1ba4:	dfc00a17 	ldw	ra,40(sp)
+    1ba8:	df000917 	ldw	fp,36(sp)
+    1bac:	ddc00817 	ldw	r23,32(sp)
+    1bb0:	dd800717 	ldw	r22,28(sp)
+    1bb4:	dd400617 	ldw	r21,24(sp)
+    1bb8:	dd000517 	ldw	r20,20(sp)
+    1bbc:	dcc00417 	ldw	r19,16(sp)
+    1bc0:	dc800317 	ldw	r18,12(sp)
+    1bc4:	dc400217 	ldw	r17,8(sp)
+    1bc8:	dc000117 	ldw	r16,4(sp)
+    1bcc:	dec00e04 	addi	sp,sp,56
+    1bd0:	f800283a 	ret
+
+00001bd4 <alt_putchar>:
+ * Uses the ALT_DRIVER_WRITE() macro to call directly to driver if available.
+ * Otherwise, uses newlib provided putchar() routine.
+ */
+int 
+alt_putchar(int c)
+{
+    1bd4:	defffd04 	addi	sp,sp,-12
+    1bd8:	dc000115 	stw	r16,4(sp)
+	char        c1 = (char)(c & 0xff);
+    return write(STDOUT_FILENO,&c1,1);
+#else
+#ifdef ALT_USE_DIRECT_DRIVERS
+    ALT_DRIVER_WRITE_EXTERNS(ALT_STDOUT_DEV);
+    char        c1 = (char)(c & 0xff);
+    1bdc:	d9000005 	stb	r4,0(sp)
+ * Uses the ALT_DRIVER_WRITE() macro to call directly to driver if available.
+ * Otherwise, uses newlib provided putchar() routine.
+ */
+int 
+alt_putchar(int c)
+{
+    1be0:	2021883a 	mov	r16,r4
+#else
+#ifdef ALT_USE_DIRECT_DRIVERS
+    ALT_DRIVER_WRITE_EXTERNS(ALT_STDOUT_DEV);
+    char        c1 = (char)(c & 0xff);
+
+    if (ALT_DRIVER_WRITE(ALT_STDOUT_DEV, &c1, 1, 0) == -1) {
+    1be4:	01000034 	movhi	r4,0
+    1be8:	000f883a 	mov	r7,zero
+    1bec:	01800044 	movi	r6,1
+    1bf0:	d80b883a 	mov	r5,sp
+    1bf4:	21087604 	addi	r4,r4,8664
+ * Uses the ALT_DRIVER_WRITE() macro to call directly to driver if available.
+ * Otherwise, uses newlib provided putchar() routine.
+ */
+int 
+alt_putchar(int c)
+{
+    1bf8:	dfc00215 	stw	ra,8(sp)
+#else
+#ifdef ALT_USE_DIRECT_DRIVERS
+    ALT_DRIVER_WRITE_EXTERNS(ALT_STDOUT_DEV);
+    char        c1 = (char)(c & 0xff);
+
+    if (ALT_DRIVER_WRITE(ALT_STDOUT_DEV, &c1, 1, 0) == -1) {
+    1bfc:	0001d380 	call	1d38 <altera_avalon_jtag_uart_write>
+    1c00:	00ffffc4 	movi	r3,-1
+    1c04:	10c00126 	beq	r2,r3,1c0c <alt_putchar+0x38>
+        return -1;
+    }
+    return c;
+    1c08:	8005883a 	mov	r2,r16
+#else
+    return putchar(c);
+#endif
+#endif
+}
+    1c0c:	dfc00217 	ldw	ra,8(sp)
+    1c10:	dc000117 	ldw	r16,4(sp)
+    1c14:	dec00304 	addi	sp,sp,12
+    1c18:	f800283a 	ret
+
+00001c1c <alt_putstr>:
+ * Uses the ALT_DRIVER_WRITE() macro to call directly to driver if available.
+ * Otherwise, uses newlib provided fputs() routine.
+ */
+int 
+alt_putstr(const char* str)
+{
+    1c1c:	defffe04 	addi	sp,sp,-8
+    1c20:	dc000015 	stw	r16,0(sp)
+    1c24:	dfc00115 	stw	ra,4(sp)
+    1c28:	2021883a 	mov	r16,r4
+#ifdef ALT_SEMIHOSTING
+    return write(STDOUT_FILENO,str,strlen(str));
+#else
+#ifdef ALT_USE_DIRECT_DRIVERS
+    ALT_DRIVER_WRITE_EXTERNS(ALT_STDOUT_DEV);
+    return ALT_DRIVER_WRITE(ALT_STDOUT_DEV, str, strlen(str), 0);
+    1c2c:	00018a00 	call	18a0 <strlen>
+    1c30:	01000034 	movhi	r4,0
+    1c34:	000f883a 	mov	r7,zero
+    1c38:	100d883a 	mov	r6,r2
+    1c3c:	800b883a 	mov	r5,r16
+    1c40:	21087604 	addi	r4,r4,8664
+#else
+    return fputs(str, stdout);
+#endif
+#endif
+}
+    1c44:	dfc00117 	ldw	ra,4(sp)
+    1c48:	dc000017 	ldw	r16,0(sp)
+    1c4c:	dec00204 	addi	sp,sp,8
+#ifdef ALT_SEMIHOSTING
+    return write(STDOUT_FILENO,str,strlen(str));
+#else
+#ifdef ALT_USE_DIRECT_DRIVERS
+    ALT_DRIVER_WRITE_EXTERNS(ALT_STDOUT_DEV);
+    return ALT_DRIVER_WRITE(ALT_STDOUT_DEV, str, strlen(str), 0);
+    1c50:	0001d381 	jmpi	1d38 <altera_avalon_jtag_uart_write>
+
+00001c54 <usleep>:
+int ALT_USLEEP (useconds_t us)
+#else
+unsigned int ALT_USLEEP (unsigned int us)
+#endif
+{
+  return alt_busy_sleep(us);
+    1c54:	0001d6c1 	jmpi	1d6c <alt_busy_sleep>
+
+00001c58 <write>:
+#if !defined(ALT_STDOUT_PRESENT) && !defined(ALT_STDERR_PRESENT)
+    /* Generate a link time warning, should this function ever be called. */
+    ALT_STUB_WARNING(write);
+#endif
+
+    switch (file) {
+    1c58:	00800044 	movi	r2,1
+    1c5c:	20800226 	beq	r4,r2,1c68 <write+0x10>
+    1c60:	00800084 	movi	r2,2
+    1c64:	2080041e 	bne	r4,r2,1c78 <write+0x20>
+    case 1: /* stdout file descriptor */
+        return ALT_DRIVER_WRITE(ALT_STDOUT_DEV, ptr, len, 0);
+#endif /* ALT_STDOUT_PRESENT */
+#ifdef ALT_STDERR_PRESENT
+    case 2: /* stderr file descriptor */
+        return ALT_DRIVER_WRITE(ALT_STDERR_DEV, ptr, len, 0);
+    1c68:	01000034 	movhi	r4,0
+    1c6c:	000f883a 	mov	r7,zero
+    1c70:	21087604 	addi	r4,r4,8664
+    1c74:	0001d381 	jmpi	1d38 <altera_avalon_jtag_uart_write>
+
+extern int errno;
+
+static ALT_INLINE int* alt_get_errno(void)
+{
+  return ((alt_errno) ? alt_errno() : &errno);
+    1c78:	d0a00817 	ldw	r2,-32736(gp)
+    1c7c:	10000926 	beq	r2,zero,1ca4 <write+0x4c>
+ * Provide minimal version that just writes to the stdout/stderr devices
+ * when provided.
+ */
+
+int ALT_WRITE (int file, const void *ptr, size_t len)
+{
+    1c80:	deffff04 	addi	sp,sp,-4
+    1c84:	dfc00015 	stw	ra,0(sp)
+    1c88:	103ee83a 	callr	r2
+#ifdef ALT_STDERR_PRESENT
+    case 2: /* stderr file descriptor */
+        return ALT_DRIVER_WRITE(ALT_STDERR_DEV, ptr, len, 0);
+#endif /* ALT_STDERR_PRESENT */
+    default:
+        ALT_ERRNO = EBADFD;
+    1c8c:	00c01444 	movi	r3,81
+    1c90:	10c00015 	stw	r3,0(r2)
+        return -1;
+    }
+}
+    1c94:	00bfffc4 	movi	r2,-1
+    1c98:	dfc00017 	ldw	ra,0(sp)
+    1c9c:	dec00104 	addi	sp,sp,4
+    1ca0:	f800283a 	ret
+    1ca4:	d0a06e04 	addi	r2,gp,-32328
+#ifdef ALT_STDERR_PRESENT
+    case 2: /* stderr file descriptor */
+        return ALT_DRIVER_WRITE(ALT_STDERR_DEV, ptr, len, 0);
+#endif /* ALT_STDERR_PRESENT */
+    default:
+        ALT_ERRNO = EBADFD;
+    1ca8:	00c01444 	movi	r3,81
+    1cac:	10c00015 	stw	r3,0(r2)
+        return -1;
+    }
+}
+    1cb0:	00bfffc4 	movi	r2,-1
+    1cb4:	f800283a 	ret
+
+00001cb8 <alt_irq_init>:
+ * The "base" parameter is ignored and only
+ * present for backwards-compatibility.
+ */
+
+void alt_irq_init ( const void* base )
+{
+    1cb8:	deffff04 	addi	sp,sp,-4
+    1cbc:	dfc00015 	stw	ra,0(sp)
+    ALTERA_NIOS2_GEN2_IRQ_INIT ( CPU, cpu);
+    1cc0:	0001e040 	call	1e04 <altera_nios2_gen2_irq_init>
+ * alt_irq_cpu_enable_interrupts() enables the CPU to start taking interrupts.
+ */
+static ALT_INLINE void ALT_ALWAYS_INLINE 
+       alt_irq_cpu_enable_interrupts (void)
+{
+    NIOS2_WRITE_STATUS(NIOS2_STATUS_PIE_MSK
+    1cc4:	00800044 	movi	r2,1
+    1cc8:	1001703a 	wrctl	status,r2
+    alt_irq_cpu_enable_interrupts();
+}
+    1ccc:	dfc00017 	ldw	ra,0(sp)
+    1cd0:	dec00104 	addi	sp,sp,4
+    1cd4:	f800283a 	ret
+
+00001cd8 <alt_sys_init>:
+ * Initialize the non-interrupt controller devices.
+ * Called after alt_irq_init().
+ */
+
+void alt_sys_init( void )
+{
+    1cd8:	f800283a 	ret
+
+00001cdc <altera_avalon_jtag_uart_read>:
+
+int 
+altera_avalon_jtag_uart_read(altera_avalon_jtag_uart_state* sp, 
+  char* buffer, int space, int flags)
+{
+  unsigned int base = sp->base;
+    1cdc:	21000017 	ldw	r4,0(r4)
+
+  char * ptr = buffer;
+  char * end = buffer + space;
+    1ce0:	298d883a 	add	r6,r5,r6
+
+  while (ptr < end)
+    1ce4:	2805883a 	mov	r2,r5
+
+    if (data & ALTERA_AVALON_JTAG_UART_DATA_RVALID_MSK)
+      *ptr++ = (data & ALTERA_AVALON_JTAG_UART_DATA_DATA_MSK) >> ALTERA_AVALON_JTAG_UART_DATA_DATA_OFST;
+    else if (ptr != buffer)
+      break;
+    else if(flags & O_NONBLOCK)
+    1ce8:	3a10000c 	andi	r8,r7,16384
+  unsigned int base = sp->base;
+
+  char * ptr = buffer;
+  char * end = buffer + space;
+
+  while (ptr < end)
+    1cec:	11800b2e 	bgeu	r2,r6,1d1c <altera_avalon_jtag_uart_read+0x40>
+  {
+    unsigned int data = IORD_ALTERA_AVALON_JTAG_UART_DATA(base);
+    1cf0:	20c00037 	ldwio	r3,0(r4)
+
+    if (data & ALTERA_AVALON_JTAG_UART_DATA_RVALID_MSK)
+    1cf4:	1a60000c 	andi	r9,r3,32768
+    1cf8:	48000326 	beq	r9,zero,1d08 <altera_avalon_jtag_uart_read+0x2c>
+      *ptr++ = (data & ALTERA_AVALON_JTAG_UART_DATA_DATA_MSK) >> ALTERA_AVALON_JTAG_UART_DATA_DATA_OFST;
+    1cfc:	10c00005 	stb	r3,0(r2)
+    1d00:	10800044 	addi	r2,r2,1
+    1d04:	003ff906 	br	1cec <__alt_data_end+0xfffe964c>
+    else if (ptr != buffer)
+    1d08:	11400226 	beq	r2,r5,1d14 <altera_avalon_jtag_uart_read+0x38>
+      break;   
+    
+  }
+
+  if (ptr != buffer)
+    return ptr - buffer;
+    1d0c:	1145c83a 	sub	r2,r2,r5
+    1d10:	f800283a 	ret
+
+    if (data & ALTERA_AVALON_JTAG_UART_DATA_RVALID_MSK)
+      *ptr++ = (data & ALTERA_AVALON_JTAG_UART_DATA_DATA_MSK) >> ALTERA_AVALON_JTAG_UART_DATA_DATA_OFST;
+    else if (ptr != buffer)
+      break;
+    else if(flags & O_NONBLOCK)
+    1d14:	403ff526 	beq	r8,zero,1cec <__alt_data_end+0xfffe964c>
+    1d18:	00000106 	br	1d20 <altera_avalon_jtag_uart_read+0x44>
+      break;   
+    
+  }
+
+  if (ptr != buffer)
+    1d1c:	117ffb1e 	bne	r2,r5,1d0c <__alt_data_end+0xfffe966c>
+    return ptr - buffer;
+  else if (flags & O_NONBLOCK)
+    1d20:	39d0000c 	andi	r7,r7,16384
+    1d24:	3800021e 	bne	r7,zero,1d30 <altera_avalon_jtag_uart_read+0x54>
+    return -EWOULDBLOCK;
+  else
+    return -EIO;
+    1d28:	00bffec4 	movi	r2,-5
+    1d2c:	f800283a 	ret
+  }
+
+  if (ptr != buffer)
+    return ptr - buffer;
+  else if (flags & O_NONBLOCK)
+    return -EWOULDBLOCK;
+    1d30:	00bffd44 	movi	r2,-11
+  else
+    return -EIO;
+}
+    1d34:	f800283a 	ret
+
+00001d38 <altera_avalon_jtag_uart_write>:
+ */
+
+int altera_avalon_jtag_uart_write(altera_avalon_jtag_uart_state* sp, 
+  const char * ptr, int count, int flags)
+{
+  unsigned int base = sp->base;
+    1d38:	21000017 	ldw	r4,0(r4)
+ * one FIFOs worth of data.  But you said you didn't want to use interrupts :-)
+ */
+
+int altera_avalon_jtag_uart_write(altera_avalon_jtag_uart_state* sp, 
+  const char * ptr, int count, int flags)
+{
+    1d3c:	3005883a 	mov	r2,r6
+  unsigned int base = sp->base;
+
+  const char * end = ptr + count;
+    1d40:	298d883a 	add	r6,r5,r6
+
+  while (ptr < end)
+    if ((IORD_ALTERA_AVALON_JTAG_UART_CONTROL(base) & ALTERA_AVALON_JTAG_UART_CONTROL_WSPACE_MSK) != 0)
+    1d44:	21c00104 	addi	r7,r4,4
+{
+  unsigned int base = sp->base;
+
+  const char * end = ptr + count;
+
+  while (ptr < end)
+    1d48:	2980072e 	bgeu	r5,r6,1d68 <altera_avalon_jtag_uart_write+0x30>
+    if ((IORD_ALTERA_AVALON_JTAG_UART_CONTROL(base) & ALTERA_AVALON_JTAG_UART_CONTROL_WSPACE_MSK) != 0)
+    1d4c:	38c00037 	ldwio	r3,0(r7)
+    1d50:	18ffffec 	andhi	r3,r3,65535
+    1d54:	183ffc26 	beq	r3,zero,1d48 <__alt_data_end+0xfffe96a8>
+      IOWR_ALTERA_AVALON_JTAG_UART_DATA(base, *ptr++);
+    1d58:	28c00007 	ldb	r3,0(r5)
+    1d5c:	20c00035 	stwio	r3,0(r4)
+    1d60:	29400044 	addi	r5,r5,1
+    1d64:	003ff806 	br	1d48 <__alt_data_end+0xfffe96a8>
+
+  return count;
+}
+    1d68:	f800283a 	ret
+
+00001d6c <alt_busy_sleep>:
+  {
+    cycles_per_loop = 3;
+  }
+  
+
+  big_loops = us / (INT_MAX/
+    1d6c:	014666b4 	movhi	r5,6554
+#include "alt_types.h"
+
+#include "priv/alt_busy_sleep.h"
+
+unsigned int alt_busy_sleep (unsigned int us)
+{
+    1d70:	defffe04 	addi	sp,sp,-8
+  {
+    cycles_per_loop = 3;
+  }
+  
+
+  big_loops = us / (INT_MAX/
+    1d74:	29666644 	addi	r5,r5,-26215
+#include "alt_types.h"
+
+#include "priv/alt_busy_sleep.h"
+
+unsigned int alt_busy_sleep (unsigned int us)
+{
+    1d78:	dc000015 	stw	r16,0(sp)
+    1d7c:	dfc00115 	stw	ra,4(sp)
+    1d80:	2021883a 	mov	r16,r4
+  {
+    cycles_per_loop = 3;
+  }
+  
+
+  big_loops = us / (INT_MAX/
+    1d84:	0000f340 	call	f34 <__udivsi3>
+  (ALT_CPU_FREQ/(cycles_per_loop * 1000000)));
+
+  if (big_loops)
+    1d88:	10001026 	beq	r2,zero,1dcc <alt_busy_sleep+0x60>
+      /*
+      * Do NOT Try to single step the asm statement below 
+      * (single step will never return)
+      * Step out of this function or set a breakpoint after the asm statements
+      */
+      __asm__ volatile (
+    1d8c:	01600034 	movhi	r5,32768
+        "\n1:"
+        "\n\t.pushsection .debug_alt_sim_info"
+        "\n\t.int 4, 0, 0b, 1b"
+        "\n\t.popsection"
+        :: "r" (INT_MAX));
+      us -= (INT_MAX/(ALT_CPU_FREQ/
+    1d90:	013999b4 	movhi	r4,58982
+    1d94:	0007883a 	mov	r3,zero
+      /*
+      * Do NOT Try to single step the asm statement below 
+      * (single step will never return)
+      * Step out of this function or set a breakpoint after the asm statements
+      */
+      __asm__ volatile (
+    1d98:	297fffc4 	addi	r5,r5,-1
+        "\n1:"
+        "\n\t.pushsection .debug_alt_sim_info"
+        "\n\t.int 4, 0, 0b, 1b"
+        "\n\t.popsection"
+        :: "r" (INT_MAX));
+      us -= (INT_MAX/(ALT_CPU_FREQ/
+    1d9c:	211999c4 	addi	r4,r4,26215
+      /*
+      * Do NOT Try to single step the asm statement below 
+      * (single step will never return)
+      * Step out of this function or set a breakpoint after the asm statements
+      */
+      __asm__ volatile (
+    1da0:	297fffc4 	addi	r5,r5,-1
+    1da4:	283ffe1e 	bne	r5,zero,1da0 <__alt_data_end+0xfffe9700>
+  big_loops = us / (INT_MAX/
+  (ALT_CPU_FREQ/(cycles_per_loop * 1000000)));
+
+  if (big_loops)
+  {
+    for(i=0;i<big_loops;i++)
+    1da8:	18c00044 	addi	r3,r3,1
+        "\n1:"
+        "\n\t.pushsection .debug_alt_sim_info"
+        "\n\t.int 4, 0, 0b, 1b"
+        "\n\t.popsection"
+        :: "r" (INT_MAX));
+      us -= (INT_MAX/(ALT_CPU_FREQ/
+    1dac:	8121883a 	add	r16,r16,r4
+  big_loops = us / (INT_MAX/
+  (ALT_CPU_FREQ/(cycles_per_loop * 1000000)));
+
+  if (big_loops)
+  {
+    for(i=0;i<big_loops;i++)
+    1db0:	18bffb16 	blt	r3,r2,1da0 <__alt_data_end+0xfffe9700>
+    /*
+    * Do NOT Try to single step the asm statement below 
+    * (single step will never return)
+    * Step out of this function or set a breakpoint after the asm statements
+    */
+    __asm__ volatile (
+    1db4:	01400144 	movi	r5,5
+    1db8:	8009883a 	mov	r4,r16
+    1dbc:	0000ff00 	call	ff0 <__mulsi3>
+    1dc0:	10bfffc4 	addi	r2,r2,-1
+    1dc4:	103ffe1e 	bne	r2,zero,1dc0 <__alt_data_end+0xfffe9720>
+    1dc8:	00000506 	br	1de0 <alt_busy_sleep+0x74>
+    /*
+    * Do NOT Try to single step the asm statement below 
+    * (single step will never return)
+    * Step out of this function or set a breakpoint after the asm statements
+    */
+    __asm__ volatile (
+    1dcc:	01400144 	movi	r5,5
+    1dd0:	8009883a 	mov	r4,r16
+    1dd4:	0000ff00 	call	ff0 <__mulsi3>
+    1dd8:	10bfffc4 	addi	r2,r2,-1
+    1ddc:	00bffe16 	blt	zero,r2,1dd8 <__alt_data_end+0xfffe9738>
+      "\n\t.popsection"
+      :: "r" (us*(ALT_CPU_FREQ/(cycles_per_loop * 1000000))));
+  }
+#endif /* #ifndef ALT_SIM_OPTIMIZE */
+  return 0;
+}
+    1de0:	0005883a 	mov	r2,zero
+    1de4:	dfc00117 	ldw	ra,4(sp)
+    1de8:	dc000017 	ldw	r16,0(sp)
+    1dec:	dec00204 	addi	sp,sp,8
+    1df0:	f800283a 	ret
+
+00001df4 <alt_dcache_flush_all>:
+/*
+ * alt_dcache_flush_all() is called to flush the entire data cache.
+ */
+
+void alt_dcache_flush_all (void)
+{
+    1df4:	f800283a 	ret
+
+00001df8 <alt_dev_null_write>:
+ */
+
+static int alt_dev_null_write (alt_fd* fd, const char* ptr, int len)
+{
+  return len;
+}
+    1df8:	3005883a 	mov	r2,r6
+    1dfc:	f800283a 	ret
+
+00001e00 <alt_icache_flush_all>:
+/*
+ * alt_icache_flush_all() is called to flush the entire instruction cache.
+ */
+
+void alt_icache_flush_all (void)
+{
+    1e00:	f800283a 	ret
+
+00001e04 <altera_nios2_gen2_irq_init>:
+ * To initialize the internal interrupt controller, just clear the IENABLE
+ * register so that all possible IRQs are disabled.
+ */
+void altera_nios2_gen2_irq_init(void) 
+{
+    NIOS2_WRITE_IENABLE(0);
+    1e04:	000170fa 	wrctl	ienable,zero
+    1e08:	f800283a 	ret

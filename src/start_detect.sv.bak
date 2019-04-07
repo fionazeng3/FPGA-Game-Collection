@@ -1,0 +1,57 @@
+module start_detect
+	(input	logic	clk_i
+	,input	logic	rst_i
+	,input	logic	data_i
+	,output	logic	enable_o
+	);
+	
+	logic[3:0] counter;
+	logic state_r, state_n;
+	parameter IDLE = 1'b0;
+	parameter LOADING = 1'b1;
+	
+	always_ff @(posedge clk_i or posedge rst_i) begin
+		if (rst_i) begin
+			state_r <= IDLE;
+		end else begin
+			state_r <= state_n;
+		end
+	end
+	
+	always_comb begin
+		case (state_r)
+			IDLE: begin
+				state_n = IDLE;
+				if (~data_i) begin
+					state_n = LOADING;
+				end
+			end
+			
+			LOADING: begin
+				state_n = LOADING;
+				if (counter == 4'b1000) begin
+					state_n = IDLE;
+				end
+			end
+			
+			default: begin
+				state_n = IDLE;
+			end
+		endcase
+	end
+
+assign enable_o = (state_n == LOADING) | (state_r == LOADING);
+
+	always_ff @(posedge clk_i or posedge rst_i) begin
+		if (rst_i) begin
+			counter <= 4'b0000;
+		end else if (state_r == LOADING) begin
+			counter = counter + 1'b1;
+			if (counter == 4'b1000) begin
+				counter = 4'b0000;
+			end
+		end else begin
+			counter = counter;
+		end
+	end
+endmodule
